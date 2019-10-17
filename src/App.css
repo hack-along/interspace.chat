@@ -14,10 +14,44 @@ h1 {
   background-color: #282c34;
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-header p {
+  font-size: calc(10px + 1vmin);
+}
+
+
+.map-container {
+  position: absolute;
+  left: 0;
+}
+
+#meet {
+  right: 0;
+  top: 27%;
+  position: absolute;
+}
+
+.spaceName {
+  color: black;
+  font-size: 12px;
+  width: 100%;
+  display: block;
+}
+
+.map-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 640px;
+    height: 480px;
+    background: beige;
+    border: 3px groove yellow;
 }
 
 
@@ -63,6 +97,10 @@ h1 {
   height: 50px;
 }
 
+.hexagon:hover {
+  cursor: pointer;
+}
+
 .hexagon {
 position: absolute;
 width: 70px;
@@ -85,12 +123,15 @@ border-right: 35px solid transparent;
 .hexagon:before {
 bottom: 100%;
 border-bottom: 20.21px solid #64C7CC;
+margin-left: -34px;
 }
 
 .hexagon:after {
 top: 100%;
 width: 0;
 border-top: 20.21px solid #64C7CC;
+margin-left: -34px;
+
 }
 
 .pavle {

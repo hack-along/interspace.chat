@@ -8,7 +8,7 @@ const JitsiInstance = () => {
   const { currentSpace } = useContext(SpaceContext);
 
   useEffect(() => {
-    const domain = "meet.jit.si";
+    const domain = "meet.jit.si/interspace";
     const options = {
       roomName: currentSpace,
       width: 700,

@@ -11,12 +11,15 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Interspace.chat v.0</h1>
+        <p>Remotely collaborate with teams, friends, projects, and communities on the Interspace</p>
         <SpaceContextProvider>
           <Space />
           <div id="meetContainer"></div>
           <JitsiInstance />
         </SpaceContextProvider>
       </header>
+      <script>
+      </script>
     </div>
   );
 }
