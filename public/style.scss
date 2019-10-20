@@ -1,0 +1,175 @@
+$gridSize: 1vw;
+$circleR: 4;
+$circleD: $circleR * 2;
+$rows: (
+  1: 0,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  6: 6,
+  7: 8
+);
+$columns: (
+  "left": 0,
+  "center-left": 1.75,
+  "center": 3.5,
+  "center-right": 5.25,
+  "right": 7
+);
+@function row-point($value) {
+  @return $value * $circleR + $circleR * 0.25;
+}
+@mixin calc-row($value) {
+  grid-row-start: row-point($value);
+  grid-row-end: row-point($value) + $circleD;
+}
+@mixin calc-col($value) {
+  grid-column-start: row-point($value);
+  grid-column-end: row-point($value) + $circleD;
+}
+@mixin size {
+  height: $gridSize * 40;
+  width: $gridSize * 36;
+}
+
+body {
+  background: linear-gradient(180deg, #000e23 0%, #000f21 100%);
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10vw;
+  @media screen and (min-width: 601px) {
+    padding-top: 10vw;
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 100vw;
+    height:100vw;
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
+.m-grid-container {
+  @include size;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(36, 1fr);
+  grid-template-rows: repeat(40, 1fr);
+  position: relative;
+
+  .frame {
+    @include size;
+    grid-column-start: 1;
+    grid-column-end: 36;
+    grid-row-start: 1;
+    grid-row-end: 40;
+
+    .path-hex {
+      stroke-width: 0.08;
+      stroke: rgba(255, 255, 255, 0.1);
+      fill: none;
+    }
+
+    .animated {
+      stroke-width: 0.1;
+      stroke: rgba(255, 255, 255, 0.4);
+      fill: none;
+      stroke-dasharray: 210;
+      animation: 4s dash ease-in forwards;
+    }
+
+    .path-circle {
+      stroke-width: 0.05;
+      stroke: rgba(255, 255, 255, 0.7);
+      fill: none;
+      stroke-dasharray: 210;
+      animation: 5s dash2 ease-in ;
+
+      &.sm {
+        stroke-width: 0.1;
+        animation: 5s dash2 ease-in ;
+        animation-direction: alternate;
+      }
+    }
+  }
+  @keyframes dash {
+    0% {
+      opacity: 0;
+    }
+
+    1% {
+      opacity: 1;
+      stroke-dashoffset: 110;
+    }
+
+    100% {
+      stroke-dashoffset: 310;
+    }
+  }
+  @keyframes dash2 {
+    0% {
+      stroke-dashoffset: 210;
+          }
+
+    70% {
+      stroke-dashoffset: 10;
+
+    }
+    100% {
+      opacity:0;
+    }
+  }
+
+  .circle {
+    background: radial-gradient(
+      40% 40% at 50% 50%,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(0, 0, 0, 0.1) 100%
+    );
+    border-radius: 100%;
+    display: block;
+    transition: 3s ease-in;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 999;
+
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: 2s ease-in;
+      transition-delay: 0.3s;
+      transform: scale(0.1);
+      background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(255, 255, 255, 0.6) 0%,
+        rgba(196, 196, 196, 0) 100%
+      );
+    }
+
+    &:hover {
+      transition: 1s ease-out;
+      border: 1px solid rgba(255, 255, 255, 1);
+
+      &:after {
+        transition: 0.2s ease-in;
+        transform: scale(1);
+      }
+    }
+    @each $row, $position in $rows {
+      &.row-#{$row} {
+        @include calc-row($position);
+      }
+    }
+    @each $column, $position in $columns {
+      &.c-#{$column} {
+        @include calc-col($position);
+      }
+    }
+  }
+}
