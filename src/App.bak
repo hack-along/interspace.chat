@@ -28,7 +28,7 @@ function App() {
         </div>
         <div className="container2">
           <p>
-            You're in the <span id="roomTitle">Graveyard</span>, Fucka!
+            You're in the <span id="roomTitle">Lobby</span>, Fucka!
           </p>
         </div>
       </div>

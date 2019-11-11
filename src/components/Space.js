@@ -41,7 +41,7 @@ const Space = () => {
     <SpaceSelector>
       <span>
         <Headline>
-          Welcome to interspace.
+          Welcome to Interspace.
         </Headline>
         <SpaceInfo>
           You're in the <CurrentSpace>{currentSpace}</CurrentSpace>!

@@ -1,6 +1,9 @@
 import React from "react";
 import "./App.css";
+import LiminalSpace from "./components/LiminalSpace";
+import MetatronSpace from "./components/MetatronSpace";
 import Space from "./components/Space";
+
 import JitsiInstance from "./components/JitsiInstance.js";
 import SpaceContextProvider from "./contexts/SpaceContext";
 import UserContextProvider from "./contexts/UserContext";
@@ -35,13 +38,13 @@ function App() {
         <SpaceContextProvider>
             <Switch>
             <Route path="/liminal">
-              <Space />
+              <LiminalSpace />
             </Route>
-            <Route path="/topics">
-             
+            <Route path="/metatron">
+             <MetatronSpace />
             </Route>
             <Route path="/">
-              
+             <Space />
             </Route>
           </Switch>
           <div className="meetContainer">
