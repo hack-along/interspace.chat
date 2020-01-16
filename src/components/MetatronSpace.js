@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { SpaceContext } from "../contexts/SpaceContext";
 import styled from "styled-components";
+import "../style.css";
 
 const Space = () => {
   const { currentSpace, setSpace } = useContext(SpaceContext);
