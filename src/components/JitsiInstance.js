@@ -15,11 +15,11 @@ const JitsiInstance = () => {
   const { currentSpace } = useContext(SpaceContext);
   const { user } = useContext(UserContext);
 
+  const width = 800;
   const height = 600;
-  const width = 600;
 
   useEffect(() => {
-    const domain = "meet.jit.si/interspace";
+    const domain = "meet.jit.si/interspace/noncon";
     const options = {
       roomName: currentSpace,
       width: width,
@@ -28,7 +28,7 @@ const JitsiInstance = () => {
     };
     const api = new JitsiMeetExternalAPI(domain, options);
 
-    api.executeCommand("displayName", user);
+    //    api.executeCommand("displayName", user);
 
     return function cleanup() {
       api.dispose();
