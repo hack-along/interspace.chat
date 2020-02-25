@@ -59,8 +59,8 @@ h1 {
 .map-container {
   /* opacity: 0.5; */
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 40px;
+  left: 20px;
 }
 
 .image-map {
