@@ -19,11 +19,11 @@ const Space = () => {
     padding-bottom: 1rem;
   `;
 
-  const SpaceInfo = styled.p`
+  const SpaceInfo = styled.span`
     font-size: 2rem;
   `;
 
-  const Intro = styled.p`
+  const Intro = styled.span`
     font-size: 1.3rem;
   `;
 
@@ -45,39 +45,29 @@ const Space = () => {
       </span>
 
       <div className="map-container">
-        <span className="mapInstructions">
-          Click a location below to join a conversation.
-        </span>
-        <img
-          src="map-liminal2.png"
-          className="image-map"
-          alt="map"
-          onClick={() => setSpace("yard")}
-        />
-        <span className="defaultRoomName">Yard</span>
         <div
-          className="click-zone a"
+          className="click-zone"
           data-zone="Living Room"
           onClick={() => setSpace("kitchen")}
         >
           <span className="roomName">Kitchen</span>
         </div>
         <div
-          className="click-zone b"
+          className="click-zone"
           data-zone="Dining Room"
           onClick={() => setSpace("living room")}
         >
           <span className="roomName">Living Room</span>
         </div>
         <div
-          className="click-zone c"
+          className="click-zone"
           data-zone="Sunset Patio"
           onClick={() => setSpace("patio")}
         >
           <span className="roomName">Patio</span>
         </div>
         <div
-          className="click-zone d"
+          className="click-zone"
           data-zone="Portal Zone"
           onClick={() => setSpace("poOOOooOortal")}
         >
