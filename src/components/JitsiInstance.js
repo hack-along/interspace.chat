@@ -7,22 +7,21 @@ import styled from "styled-components";
 const JitsiMeetExternalAPI = window.JitsiMeetExternalAPI;
 
 const JitsiContainer = styled.div`
-  width: auto;
-  float: right;
+  width: 100vw;
 `;
 
 const JitsiInstance = () => {
   const { currentSpace } = useContext(SpaceContext);
   const { user } = useContext(UserContext);
 
-  const width = 800;
-  const height = 600;
+  //  const width = 1024;
+  const height = 700;
 
   useEffect(() => {
     const domain = "meet.jit.si/interspace/noncon";
     const options = {
       roomName: currentSpace,
-      width: width,
+      //     width: width,
       height: height,
       parentNode: document.querySelector("#meet")
     };
