@@ -3,11 +3,7 @@ import { SpaceContext } from "../contexts/SpaceContext";
 import styled from "styled-components";
 
 const Space = () => {
-  const { setSpace } = useContext(SpaceContext);
-
-  const portalStyle = {
-    marginTop: "10px"
-  };
+  const { currentSpace, setSpace } = useContext(SpaceContext);
 
   const Header = styled.img`
     width: 100vw;
@@ -16,28 +12,23 @@ const Space = () => {
 
   const SpaceSelector = styled.nav``;
 
+  const Room = ({ roomName, active }) => (
+    <div className="click-zone" onClick={() => setSpace(roomName)}>
+      <span className={`roomFont ${currentSpace === roomName ? "active" : ""}`}>
+        {roomName}
+      </span>
+    </div>
+  );
+
   return (
     <SpaceSelector>
       <Header src="interspace-noncon-header.png" />
       <hr />
       <div className="map-container">
-        <div className="click-zone" onClick={() => setSpace("entry")}>
-          <span className="roomName">Entry</span>
-        </div>
-        <div className="click-zone" onClick={() => setSpace("qrypto-qube")}>
-          <span className="roomName">Qrypto Qube</span>
-        </div>
-        <div
-          className="click-zone"
-          onClick={() => setSpace("qrypto-liberation-institute")}
-        >
-          <span className="roomName">QryptoLiberation Institute</span>
-        </div>
-        <div className="click-zone" onClick={() => setSpace("hallway")}>
-          <span className="roomName" style={portalStyle}>
-            Hallway
-          </span>
-        </div>
+        <Room roomName="Entry" />
+        <Room roomName="Qrypto Qube" />
+        <Room roomName="QryptoLiberation Institute" />
+        <Room roomName="Hall Track" />
       </div>
     </SpaceSelector>
   );

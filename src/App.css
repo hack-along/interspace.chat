@@ -31,12 +31,7 @@ h1 {
   font-size: calc(10px + 1vmin);
 }
 
-.roomName {
-  /* font-size: 12px; */
-  width: 100%;
-  /* display: block; */
-  /* margin-top: -20px; */
-}
+
 
 /* .map-background {
     position: absolute;
@@ -68,19 +63,18 @@ h1 {
   /* z-index: 0; */
 }
 
-.defaultRoomName {
+.roomFont {
   position: relative;
   color: red;
 }
 
-.image-map:hover {
-  border: solid 2px purple;
-  box-sizing: border-box;
+.roomFont:hover {
+  color: white;
 }
 
-/* .map-container:hover > * {
-  opacity: 1;
-} */
+.active {
+  color: white;
+}
 
 
 .container {
@@ -88,11 +82,7 @@ h1 {
 }
 
 .click-zone {
-  position: relative;
-  top: 0px;
   cursor: pointer;
-  /* z-index: 2; */
-  /* border: 1px solid grey; */
 }
 
 .click-zone:hover {
