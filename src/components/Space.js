@@ -27,7 +27,7 @@ const Space = () => {
       <div className="map-container">
         <Room roomName="Entry" />
         <Room roomName="Qrypto Qube" />
-        <Room roomName="QryptoLiberation Institute" />
+        <Room roomName="QryptoLib Institute" />
         <Room roomName="Hall Track" />
       </div>
     </SpaceSelector>

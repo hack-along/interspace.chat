@@ -49,7 +49,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
-  min-height: 2rem;
+  min-height: 2.4rem;
 }
 
 .image-map {
@@ -66,6 +66,9 @@ h1 {
 .roomFont {
   position: relative;
   color: red;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-transform: uppercase;
 }
 
 .roomFont:hover {
