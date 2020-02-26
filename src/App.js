@@ -4,7 +4,7 @@ import Space from "./components/Space";
 import JitsiInstance from "./components/JitsiInstance.js";
 import SpaceContextProvider from "./contexts/SpaceContext";
 import UserContextProvider from "./contexts/UserContext";
-import SpaceInfo from "./components/SpaceInfo";
+// import SpaceInfo from "./components/SpaceInfo";
 
 function App() {
   return (
@@ -16,7 +16,6 @@ function App() {
           <div className="meetContainer">
             <JitsiInstance />
           </div>
-          <SpaceInfo />
         </SpaceContextProvider>
       </UserContextProvider>
     </div>
