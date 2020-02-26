@@ -1,12 +1,6 @@
 * {
-  font-family: "Courier New", Courier, monospace;
   color: whitesmoke;
   background-color: black;
-  --liminal2-left: 20px;
-  --liminal2-top: 400px;
-  --liminal2-height: 228px;
-  --liminal2-scale-ratio: 1.4;
-  --liminal2-width: 474px;
 }
 
 .body {
@@ -38,11 +32,9 @@ h1 {
 }
 
 .roomName {
-  color: greenyellow;
   /* font-size: 12px; */
   width: 100%;
   /* display: block; */
-  padding: auto;
   /* margin-top: -20px; */
 }
 
@@ -57,10 +49,12 @@ h1 {
 } */
 
 .map-container {
-  /* opacity: 0.5; */
-  position: absolute;
-  top: 40px;
-  left: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  min-height: 2rem;
 }
 
 .image-map {
@@ -76,7 +70,7 @@ h1 {
 
 .defaultRoomName {
   position: relative;
-  color: greenyellow;
+  color: red;
 }
 
 .image-map:hover {
@@ -102,5 +96,5 @@ h1 {
 }
 
 .click-zone:hover {
-  border: solid 0.5px purple;
+  border: solid 0.5px white;
 }

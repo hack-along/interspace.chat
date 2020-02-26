@@ -3,76 +3,39 @@ import { SpaceContext } from "../contexts/SpaceContext";
 import styled from "styled-components";
 
 const Space = () => {
-  const { currentSpace, setSpace } = useContext(SpaceContext);
+  const { setSpace } = useContext(SpaceContext);
 
   const portalStyle = {
     marginTop: "10px"
   };
 
-  const Headline = styled.h6`
-    font-weight: 100;
-    font-size: 1.3rem;
-    padding: 1rem;
+  const Header = styled.img`
+    width: 100vw;
+    height: auto;
   `;
 
-  const SpaceSelector = styled.nav`
-    padding-bottom: 1rem;
-  `;
-
-  const SpaceInfo = styled.span`
-    font-size: 2rem;
-  `;
-
-  const Intro = styled.span`
-    font-size: 1.3rem;
-  `;
-
-  const roomName = styled.p`
-    font-size: 1.3rem;
-  `;
-
-  const CurrentSpace = styled.span`
-    color: pink;
-  `;
+  const SpaceSelector = styled.nav``;
 
   return (
     <SpaceSelector>
-      <span>
-        <Headline>Welcome to interspace.</Headline>
-        <SpaceInfo>
-          You're in the <CurrentSpace>{currentSpace}</CurrentSpace>!
-        </SpaceInfo>
-      </span>
-
+      <Header src="interspace-noncon-header.png" />
+      <hr />
       <div className="map-container">
-        <div
-          className="click-zone"
-          data-zone="Living Room"
-          onClick={() => setSpace("kitchen")}
-        >
-          <span className="roomName">Kitchen</span>
+        <div className="click-zone" onClick={() => setSpace("entry")}>
+          <span className="roomName">Entry</span>
+        </div>
+        <div className="click-zone" onClick={() => setSpace("qrypto-qube")}>
+          <span className="roomName">Qrypto Qube</span>
         </div>
         <div
           className="click-zone"
-          data-zone="Dining Room"
-          onClick={() => setSpace("living room")}
+          onClick={() => setSpace("qrypto-liberation-institute")}
         >
-          <span className="roomName">Living Room</span>
+          <span className="roomName">QryptoLiberation Institute</span>
         </div>
-        <div
-          className="click-zone"
-          data-zone="Sunset Patio"
-          onClick={() => setSpace("patio")}
-        >
-          <span className="roomName">Patio</span>
-        </div>
-        <div
-          className="click-zone"
-          data-zone="Portal Zone"
-          onClick={() => setSpace("poOOOooOortal")}
-        >
+        <div className="click-zone" onClick={() => setSpace("hallway")}>
           <span className="roomName" style={portalStyle}>
-            Portal
+            Hallway
           </span>
         </div>
       </div>

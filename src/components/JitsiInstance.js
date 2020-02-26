@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import { SpaceContext } from "../contexts/SpaceContext";
-import { UserContext } from "../contexts/UserContext";
+// import { UserContext } from "../contexts/UserContext";
 import styled from "styled-components";
 // import * as JitsiMeetExternalAPI from "../dist/jitsi";
 
@@ -12,7 +12,7 @@ const JitsiContainer = styled.div`
 
 const JitsiInstance = () => {
   const { currentSpace } = useContext(SpaceContext);
-  const { user } = useContext(UserContext);
+  // const { user } = useContext(UserContext);
 
   //  const width = 1024;
   const height = 700;
