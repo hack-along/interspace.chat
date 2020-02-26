@@ -19,8 +19,6 @@ const Space = () => {
     padding-bottom: 1rem;
   `;
 
-
-
   const SpaceInfo = styled.p`
     font-size: 2rem;
   `;
@@ -40,17 +38,22 @@ const Space = () => {
   return (
     <SpaceSelector>
       <span>
-        <Headline>
-          Welcome to interspace.
-        </Headline>
+        <Headline>Welcome to interspace.</Headline>
         <SpaceInfo>
           You're in the <CurrentSpace>{currentSpace}</CurrentSpace>!
         </SpaceInfo>
       </span>
 
       <div className="map-container">
-        <span className="mapInstructions">Click a location below to join a conversation.</span>
-        <img src="map-liminal2.png" className="image-map" alt="map" onClick={() => setSpace("yard")}/>
+        <span className="mapInstructions">
+          Click a location below to join a conversation.
+        </span>
+        <img
+          src="map-liminal2.png"
+          className="image-map"
+          alt="map"
+          onClick={() => setSpace("yard")}
+        />
         <span className="defaultRoomName">Yard</span>
         <div
           className="click-zone a"
@@ -79,18 +82,10 @@ const Space = () => {
           onClick={() => setSpace("poOOOooOortal")}
         >
           <span className="roomName" style={portalStyle}>
-          Portal
+            Portal
           </span>
         </div>
-        <img
-          className="click-zone pavle"
-          id="pavle"
-          src="pavle.png"
-          data-zone="Pavle"
-          alt="avatar"
-        />
       </div>
-
     </SpaceSelector>
   );
 };
