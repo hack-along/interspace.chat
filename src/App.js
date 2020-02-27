@@ -12,7 +12,6 @@ function App() {
       <UserContextProvider>
         <SpaceContextProvider>
           <Space />
-          <hr />
           <div className="meetContainer">
             <JitsiInstance />
           </div>

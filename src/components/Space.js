@@ -6,11 +6,19 @@ const Space = () => {
   const { currentSpace, setSpace } = useContext(SpaceContext);
 
   const Header = styled.img`
-    width: 100vw;
+    width: 50vw;
     height: auto;
+    margin: 0 auto;
+    padding: 1rem;
   `;
 
-  const SpaceSelector = styled.nav``;
+  const SpaceSelector = styled.nav`
+    padding-top: 1rem;
+  `;
+
+  const RedLine = styled.hr`
+    border-color: red;
+  `;
 
   const Room = ({ roomName, active }) => (
     <div className="click-zone" onClick={() => setSpace(roomName)}>
@@ -23,12 +31,12 @@ const Space = () => {
   return (
     <SpaceSelector>
       <Header src="interspace-noncon-header.png" />
-      <hr />
+      <RedLine />
       <div className="map-container">
-        <Room roomName="Entry" />
-        <Room roomName="Qrypto Qube" />
-        <Room roomName="QryptoLib Institute" />
-        <Room roomName="Hall Track" />
+        <Room roomName="Udi's Lobby" />
+        <Room roomName="The Qrypto Qube" />
+        <Room roomName="QryptoLiberation" />
+        <Room roomName="The Hall Track" />
       </div>
     </SpaceSelector>
   );
