@@ -33,10 +33,10 @@ const Space = () => {
       <Header src="interspace-noncon-header.png" />
       <RedLine />
       <div className="map-container">
-        <Room roomName="Udi's Lobby" />
-        <Room roomName="The Qrypto Qube" />
-        <Room roomName="QryptoLiberation" />
-        <Room roomName="The Hall Track" />
+        <Room roomName="Lobby" />
+        <Room roomName="Parallele Polis" />
+        <Room roomName="Cryptoeconomic Institute" />
+        <Room roomName="Metatrack" />
       </div>
     </SpaceSelector>
   );
