@@ -19,7 +19,7 @@ const JitsiInstance = () => {
   const height = 700;
 
   useEffect(() => {
-    const domain = "meet.jit.si/interspace/noncon";
+    const domain = "interspace.geleeroyale.work/noncon";
     const options = {
       roomName: currentSpace,
       //     width: width,
