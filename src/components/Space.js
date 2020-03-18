@@ -316,69 +316,66 @@ const Space = () => {
 						</svg>
 						<div
 							id='c0'
-							class='circle row-1 c-center c-1 click-zone click-zone-highlight circleone'
+							className='circle row-1 c-center c-1 click-zone click-zone-highlight circleone'
 							onClick={() => launchFloatingSpace('room1')}>
 							<span className='roomName'>room1</span>
 						</div>
 						<div
 							id='c1'
-							class='circle row-2 c-right click-zone'
+							className='circle row-2 c-right click-zone'
 							onClick={() => launchFloatingSpace('room2')}>
 							<span className='roomName'>room2</span>
-							<div className='click-zone-highlight b'></div>
 						</div>
 						<div
 							id='c2'
-							class='circle row-6 c-right click-zone'
+							className='circle row-6 c-right click-zone'
 							onClick={() => launchFloatingSpace('room3')}>
 							<span className='roomName'>room3</span>
-							<div className='click-zone-highlight c'></div>
 						</div>
 						<div
 							id='c3'
-							class='circle row-7 c-center click-zone'
+							className='circle row-7 c-center click-zone'
 							onClick={() => launchFloatingSpace('room4')}>
-							<span className='roomName' style={portalStyle}>
-								room4
-							</span>
-							<div className='click-zone-highlight d'></div>
+							<span className='roomName'>room4</span>
 						</div>
 						<div
 							id='c4'
-							class='circle row-6 c-left click-zone'
+							className='circle row-6 c-left click-zone'
 							onClick={() => launchFloatingSpace('room5')}>
 							<span className='roomName'>room5</span>
-							<div className='click-zone-highlight e'></div>
 						</div>
 						<div
 							id='c5'
-							class='circle row-2 c-left click-zone'
+							className='circle row-2 c-left click-zone'
 							onClick={() => launchFloatingSpace('loft.radio')}>
 							<span className='roomName'>loft.radio</span>
-							<div className='click-zone-highlight f'></div>
 						</div>
 
 						<div
 							id='c6'
-							class='circle row-2 c-center click-zone'
+							className='circle row-2 c-center click-zone'
 							onClick={() => launchFloatingSpace('chat')}>
 							<span className='roomName'>chat</span>
-							<div className='click-zone-highlight g'></div>
 						</div>
 
-						<div id='c7' class='circle row-3 c-center-right'></div>
+						<div id='c7' className='circle row-3 c-center-right'></div>
 
 						<div
 							id='c8'
-							class='circle row-5 c-center-right'
-							onClick={() =>
-								openInNewTab('https://interspace.metagame.wtf')
-							}></div>
-						<div id='c9' class='circle row-6 c-center'></div>
-						<div id='c10' class='circle row-5 c-center-left'></div>
-						<div id='c11' class='circle row-3 c-center-left'></div>
+							className='circle row-5 c-center-right click-zone'
+							onClick={() => openInNewTab('https://interspace.metagame.wtf')}>
+							<span className='roomName'>Metagame</span>
+						</div>
+						<div id='c9' className='circle row-6 c-center'></div>
+						<div
+							id='c10'
+							className='circle row-5 c-center-left click-zone'
+							onClick={() => openInNewTab('https://interspace.noncon.org')}>
+							<span className='roomName'>NONCON2020</span>>
+						</div>
+						<div id='c11' className='circle row-3 c-center-left'></div>
 
-						<div id='c12' class='circle row-4 c-center'></div>
+						<div id='c12' className='circle row-4 c-center'></div>
 					</div>
 					{/*
         <span className="mapInstructions">
