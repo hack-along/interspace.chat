@@ -30,7 +30,7 @@ const Headline = styled.h6`
 	}
 
 	@media (max-width: 600px) {
-		background-color: whitesmoke;
+		background-color: black;
 	}
 `;
 
@@ -62,7 +62,7 @@ const Descripton = styled.div`
 	position: absolute;
 	top: 0px;
 	width: 100%;
-	background-color: #00ffbf;
+	background-color: black;
 	z-index: 1;
 	margin: 0px;
 	font-size: 0.8rem;
