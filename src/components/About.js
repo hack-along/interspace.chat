@@ -7,11 +7,11 @@ const AboutStyled = styled.nav`
 
 	.Collapsible__trigger {
 		color: black;
-		background-color: #00ffbf;
+		background-color: whitesmoke;
 		cursor: pointer;
 		padding: 0.2rem;
 		:hover {
-			background-color: whitesmoke;
+			background-color: #00ffbf;
 		}
 	}
 	.Collapsible__contentOuter {
