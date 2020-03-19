@@ -52,7 +52,7 @@ const Help = () => {
 				<ul>
 					<StyledListItem>
 						The text chat can be used by registering on the{' '}
-						<a href='https://messenger.interspace.chat'>Rockechat server</a>
+						<a href='https://messenger.interspace.chat'>Rocketchat server</a>
 					</StyledListItem>
 				</ul>
 			</Collapsible>
