@@ -4,9 +4,7 @@ import Collapsible from 'react-collapsible';
 
 const AboutStyled = styled.nav`
 	text-align: left;
-	position: fixed;
-	top: 20px;
-	right: 20px;
+
 	.Collapsible__trigger {
 		color: black;
 		background-color: #00ffbf;
