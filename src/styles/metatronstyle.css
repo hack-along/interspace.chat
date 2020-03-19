@@ -1,0 +1,205 @@
+body {
+  /**
+  background: -webkit-gradient(linear, left top, left bottom, from(#000e23), to(#000f21));
+  background: -webkit-linear-gradient(top, #000e23 0%, #000f21 100%);
+  background: -o-linear-gradient(top, #000e23 0%, #000f21 100%);
+  background: linear-gradient(180deg, #000e23 0%, #000f21 100%);
+  **/
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10vw; }
+  @media screen and (min-width: 601px) {
+    body {
+      padding-top: 10vw; } }
+  @media screen and (max-width: 900px) {
+    body {
+      width: 100vw;
+      height: 100vw;
+      overflow: hidden;
+      -ms-touch-action: none;
+      touch-action: none; } }
+
+.m-grid-container {
+  height: 40vw;
+  width: 36vw;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[36];
+  grid-template-columns: repeat(36, 1fr);
+  -ms-grid-rows: (1fr)[40];
+  grid-template-rows: repeat(40, 1fr);
+  position: relative; }
+  .m-grid-container .frame {
+    height: 40vw;
+    width: 36vw;
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    -ms-grid-column-span: 35;
+    grid-column-end: 36;
+    -ms-grid-row: 1;
+    grid-row-start: 1;
+    -ms-grid-row-span: 39;
+    grid-row-end: 40; }
+    .m-grid-container .frame .path-hex {
+      stroke-width: 0.08;
+      stroke: rgba(255, 255, 255, 0.1);
+      fill: none; }
+    .m-grid-container .frame .animated {
+      stroke-width: 0.1;
+      stroke: rgba(255, 255, 255, 0.4);
+      fill: none;
+      stroke-dasharray: 210;
+      -webkit-animation: 4s dash ease-in forwards;
+      animation: 4s dash ease-in forwards; }
+    .m-grid-container .frame .path-circle {
+      stroke-width: 0.05;
+      stroke: rgba(255, 255, 255, 0.7);
+      fill: none;
+      stroke-dasharray: 210;
+      -webkit-animation: 5s dash2 ease-in;
+      animation: 5s dash2 ease-in; }
+      .m-grid-container .frame .path-circle.sm {
+        stroke-width: 0.1;
+        -webkit-animation: 5s dash2 ease-in;
+        animation: 5s dash2 ease-in;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate; }
+
+@-webkit-keyframes dash {
+  0% {
+    opacity: 0; }
+  1% {
+    opacity: 1;
+    stroke-dashoffset: 110; }
+  100% {
+    stroke-dashoffset: 310; } }
+
+@keyframes dash {
+  0% {
+    opacity: 0; }
+  1% {
+    opacity: 1;
+    stroke-dashoffset: 110; }
+  100% {
+    stroke-dashoffset: 310; } }
+
+@-webkit-keyframes dash2 {
+  0% {
+    stroke-dashoffset: 210; }
+  70% {
+    stroke-dashoffset: 10; }
+  100% {
+    opacity: 0; } }
+
+@keyframes dash2 {
+  0% {
+    stroke-dashoffset: 210; }
+  70% {
+    stroke-dashoffset: 10; }
+  100% {
+    opacity: 0; } }
+  .m-grid-container .circle {
+    background: -webkit-radial-gradient(50% 50%, 40% 40%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -o-radial-gradient(50% 50%, 40% 40%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: radial-gradient(40% 40% at 50% 50%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+    border-radius: 100%;
+    display: block;
+    -webkit-transition: 3s ease-in;
+    -o-transition: 3s ease-in;
+    transition: 3s ease-in;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 999; }
+    .m-grid-container .circle:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      -webkit-transition: 2s ease-in;
+      -o-transition: 2s ease-in;
+      transition: 2s ease-in;
+      -webkit-transition-delay: 0.3s;
+      -o-transition-delay: 0.3s;
+      transition-delay: 0.3s;
+      -webkit-transform: scale(0.1);
+      -ms-transform: scale(0.1);
+      transform: scale(0.1);
+      background: -webkit-radial-gradient(50% 50%, 50% 50%, rgba(255, 255, 255, 0.6) 0%, rgba(196, 196, 196, 0) 100%);
+      background: -o-radial-gradient(50% 50%, 50% 50%, rgba(255, 255, 255, 0.6) 0%, rgba(196, 196, 196, 0) 100%);
+      background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.6) 0%, rgba(196, 196, 196, 0) 100%); }
+    .m-grid-container .circle:hover {
+      -webkit-transition: 1s ease-out;
+      -o-transition: 1s ease-out;
+      transition: 1s ease-out;
+      border: 1px solid white; }
+      .m-grid-container .circle:hover:after {
+        -webkit-transition: 0.2s ease-in;
+        -o-transition: 0.2s ease-in;
+        transition: 0.2s ease-in;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1); }
+    .m-grid-container .circle.row-1 {
+      -ms-grid-row: 1;
+      grid-row-start: 1;
+      -ms-grid-row-span: 8;
+      grid-row-end: 9; }
+    .m-grid-container .circle.row-2 {
+      -ms-grid-row: 9;
+      grid-row-start: 9;
+      -ms-grid-row-span: 8;
+      grid-row-end: 17; }
+    .m-grid-container .circle.row-3 {
+      -ms-grid-row: 13;
+      grid-row-start: 13;
+      -ms-grid-row-span: 8;
+      grid-row-end: 21; }
+    .m-grid-container .circle.row-4 {
+      -ms-grid-row: 17;
+      grid-row-start: 17;
+      -ms-grid-row-span: 8;
+      grid-row-end: 25; }
+    .m-grid-container .circle.row-5 {
+      -ms-grid-row: 21;
+      grid-row-start: 21;
+      -ms-grid-row-span: 8;
+      grid-row-end: 29; }
+    .m-grid-container .circle.row-6 {
+      -ms-grid-row: 25;
+      grid-row-start: 25;
+      -ms-grid-row-span: 8;
+      grid-row-end: 33; }
+    .m-grid-container .circle.row-7 {
+      -ms-grid-row: 33;
+      grid-row-start: 33;
+      -ms-grid-row-span: 8;
+      grid-row-end: 41; }
+    .m-grid-container .circle.c-left {
+      -ms-grid-column: 1;
+      grid-column-start: 1;
+      -ms-grid-column-span: 8;
+      grid-column-end: 9; }
+    .m-grid-container .circle.c-center-left {
+      -ms-grid-column: 8;
+      grid-column-start: 8;
+      -ms-grid-column-span: 8;
+      grid-column-end: 16; }
+    .m-grid-container .circle.c-center {
+      -ms-grid-column: 15;
+      grid-column-start: 15;
+      -ms-grid-column-span: 8;
+      grid-column-end: 23; }
+    .m-grid-container .circle.c-center-right {
+      -ms-grid-column: 22;
+      grid-column-start: 22;
+      -ms-grid-column-span: 8;
+      grid-column-end: 30; }
+    .m-grid-container .circle.c-right {
+      -ms-grid-column: 29;
+      grid-column-start: 29;
+      -ms-grid-column-span: 8;
+      grid-column-end: 37; }

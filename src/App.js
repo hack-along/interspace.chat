@@ -1,24 +1,42 @@
-import React from "react";
-import "./App.css";
-import Space from "./components/Space";
-import JitsiInstance from "./components/JitsiInstance.js";
-import SpaceContextProvider from "./contexts/SpaceContext";
-import UserContextProvider from "./contexts/UserContext";
-// import Click from "./components/Click";
+import React from 'react';
+import { BrowserView, MobileView } from 'react-device-detect';
+import './styles/metatronstyle.css';
+import './App.css';
+import Space from './components/Space';
+import FloatingRoomWindow from './components/FloatingRoomWindow';
+import RootContextProvider from './contexts/RootContext';
+import HouseContext from './contexts/HouseContext';
+import SpaceContext from './contexts/SpaceContext';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
-  return (
-    <div className="App">
-      <UserContextProvider>
-        <SpaceContextProvider>
-          <Space />
-          <div className="meetContainer">
-            <JitsiInstance />
-          </div>
-        </SpaceContextProvider>
-      </UserContextProvider>
-    </div>
-  );
+	{
+		/*
+	const Sidecar = require('gitter-sidecar');
+
+	const myChat = new Sidecar({
+		room: 'interspace-chat/community'
+	});
+*/
+	}
+
+	return (
+		<div className='App'>
+			<RootContextProvider>
+				<HouseContext>
+					<SpaceContext>
+						<BrowserView>
+							<Header />
+						</BrowserView>
+						<Space />
+					</SpaceContext>
+				</HouseContext>
+				<FloatingRoomWindow />
+			</RootContextProvider>
+		</div>
+	);
 }
 
 export default App;
