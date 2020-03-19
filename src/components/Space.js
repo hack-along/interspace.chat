@@ -371,7 +371,7 @@ const Space = () => {
 							id='c10'
 							className='circle row-5 c-center-left click-zone'
 							onClick={() => openInNewTab('https://interspace.noncon.org')}>
-							<span className='roomName'>NONCON2020</span>>
+							<span className='roomName'>NONCON2020</span>
 						</div>
 						<div id='c11' className='circle row-3 c-center-left'></div>
 
