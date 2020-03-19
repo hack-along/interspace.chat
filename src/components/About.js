@@ -47,6 +47,7 @@ const About = () => {
 						<a href='https://github.com/MGrudule/metatron'>@MGrudule</a>{' '}
 					</StyledListItem>
 				</ul>
+				<hr />
 				<p>Tech used:</p>
 				<ul>
 					<StyledListItem>
@@ -60,6 +61,7 @@ const About = () => {
 						<a href='https://github.com/interspacechat'>interspace.chat</a>
 					</StyledListItem>
 				</ul>
+				<hr />
 				<p>Privacy:</p>
 				<ul>
 					<StyledListItem>Private Server</StyledListItem>

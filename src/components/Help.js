@@ -44,32 +44,15 @@ const Help = () => {
 				<ul>
 					<StyledListItem>
 						This website is making it easy for users to meet in the same rooms
-						to have a video call. We use it for conferences and gatherings{' '}
-						<a href='https://interspace.chat'>Home</a>{' '}
+						to have a video call. <br></br>We use it for conferences and
+						gatherings <a href='https://interspace.chat'>Home</a>{' '}
 					</StyledListItem>
 				</ul>
-				<p>Tech used:</p>
+				<p>Textchat:</p>
 				<ul>
 					<StyledListItem>
-						Powered by{' '}
-						<a href='https://meet.jit.si'>
-							JitSi Open Source Video Conferencing
-						</a>
-					</StyledListItem>
-					<StyledListItem>
-						Made with 💝 by{' '}
-						<a href='https://github.com/interspacechat'>interspace.chat</a>
-					</StyledListItem>
-				</ul>
-				<p>Privacy:</p>
-				<ul>
-					<StyledListItem>Private Server</StyledListItem>
-					<StyledListItem>Fully end to end encrypted</StyledListItem>
-					<StyledListItem>
-						Please don't write sensitive data into the chats.
-					</StyledListItem>
-					<StyledListItem>
-						Please adhere to a general code of conduct or risk banning.
+						The text chat can be used by registering on the{' '}
+						<a href='https://messenger.interspace.chat'>Rockechat server</a>
 					</StyledListItem>
 				</ul>
 			</Collapsible>
