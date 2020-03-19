@@ -3,12 +3,9 @@ import React from 'react';
 function ChatInstance({ width, height, backgroundColor }) {
 	return (
 		<iframe
-			id='chat'
-			type='text/html'
-			width='800'
-			height='800'
-			src='https://messenger.interspace.chat/channel/main.space?layout=embedded'
-			frameborder='0'></iframe>
+			src='https://discordapp.com/channels/690315811293888778/690315812002988361'
+			height='600'
+			width='800'></iframe>
 	);
 }
 
