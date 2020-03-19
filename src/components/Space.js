@@ -50,10 +50,12 @@ const SpaceInfo = styled.div`
 	position: fixed;
 	top: 85vh;
 	left: 58vw;
-	margin: 0 auto
+	margin: 0 auto;
 	font-size: 2rem;
 	z-index: 100;
-	div {color: violet;}
+	div {
+		color: violet;
+	}
 `;
 
 const Descripton = styled.div`
@@ -387,13 +389,13 @@ const Space = () => {
 			<MobileView>
 				<MobileContainer>
 					<Headline>
-						Servas, du bist eingeladen{' '}
+						Welcome to{' '}
 						<a
-							href='https://aufabier.at'
+							href='https://interspace.chat'
 							target='_blank'
 							rel='noopener noreferrer'
 							style={{ textDecoration: 'none' }}>
-							auf a Bier.at
+							interspace.chat
 						</a>
 					</Headline>
 					<Descripton>
