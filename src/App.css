@@ -80,7 +80,7 @@ h1 {
 }
 
 .roomFont {
-  padding: 0.5rem;
+  
   color: #00ffbf90;
   font-weight: 800;
   font-size: 1.1rem;
@@ -97,10 +97,13 @@ h1 {
 
 .roomName {
   font-family: "Comfortaa","Roboto", "Courier New", Courier, monospace;
-  font-size: 2rem;
+  font-size: 1rem;
   position: relative;
-  top: 55px;
-  color: #00ffbf00;
+  top: 65px;
+  justify-self: center;
+  text-align: center;
+  color: whitesmoke;
+  background-color: black;
   /* font-size: 12px; */
   /* display: block; */
   padding: auto;
@@ -168,48 +171,48 @@ h1 {
   /* border: 1px solid grey; */
 }
 
-#c0 {
+#c0:hover {
   background: url(./img/background4.jpg);
   background-size: cover;
 }
 
-#c1 {
+#c1:hover {
   background: url('https://images.unsplash.com/photo-1569315616076-70bf41b594c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
   background-size: cover;
 }
 
-#c2 {
+#c2:hover {
   background: url('https://images.unsplash.com/photo-1584152517971-4394baf9ffdd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
   background-size: cover;
 }
 
-#c3 {
+#c3:hover {
   background: url('https://images.unsplash.com/photo-1584247792018-3e398414640e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
   background-size: cover;
 }
 
-#c4 {
+#c4:hover {
   background: url('https://images.unsplash.com/photo-1552598715-7eeb9232a2ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
   background-size: cover;
 }
 
-#c5 {
+#c5:hover {
   background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
   background-size: cover;
 }
 
-#c6{
+#c6:hover{
   background: url('https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
   background-size: cover;
 }
 
-#c10 {
+#c10:hover {
   background: url('./img/noncon2020.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#c8 {
+#c8:hover {
   background: url('https://avatars3.githubusercontent.com/u/58242757?s=200&v=4');
   background-size: cover;
 }
