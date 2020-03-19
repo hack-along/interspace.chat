@@ -3,11 +3,9 @@ import React from 'react';
 function ChatInstance({ width, height, backgroundColor }) {
 	return (
 		<iframe
-			id='chat'
-			type='text/html'
+			src='https://titanembeds.com/embed/690315811293888778'
+			height='600'
 			width='800'
-			height='800'
-			src='https://messenger.interspace.chat/channel/main.space?layout=embedded'
 			frameborder='0'></iframe>
 	);
 }
