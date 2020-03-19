@@ -3,9 +3,10 @@ import React from 'react';
 function ChatInstance({ width, height, backgroundColor }) {
 	return (
 		<iframe
-			src='https://discordapp.com/channels/690315811293888778/690315812002988361'
+			src='https://titanembeds.com/embed/690315811293888778'
 			height='600'
-			width='800'></iframe>
+			width='800'
+			frameborder='0'></iframe>
 	);
 }
 
