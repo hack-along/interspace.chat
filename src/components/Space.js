@@ -46,12 +46,10 @@ const SpaceSelector = styled.nav`
 `;
 
 const SpaceInfo = styled.div`
-	text-align: right;
-	position: fixed;
-	top: 85vh;
-	left: 58vw;
+	text-align: center;
+	padding-top: 4rem;
 	margin: 0 auto;
-	font-size: 2rem;
+	font-size: 1rem;
 	z-index: 100;
 	div {
 		color: violet;

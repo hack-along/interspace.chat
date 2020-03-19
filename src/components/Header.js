@@ -23,11 +23,6 @@ const HeaderContainer = styled.div`
 	}
 `;
 
-const Logo2 = styled.img`
-	width: auto;
-	height: 66px;
-`;
-
 const Logotext = styled.h2`
 	align-self: flex-end;
 `;

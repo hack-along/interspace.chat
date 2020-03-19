@@ -4,6 +4,7 @@
   font-weight: 800;
 }
 
+
 * {
   font-family: "Comfortaa","RobotoMono", Courier, monospace;
   font-weight: 800;
@@ -151,7 +152,7 @@ h1 {
 
 .m-grid-container {
   position: fixed;
-  left: 30vw;
+  left: 32vw;
   top: 18vh;
 }
 
