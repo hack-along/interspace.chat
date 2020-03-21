@@ -157,7 +157,7 @@ h1 {
 }
 
 .click-zone {
-  transition: 0.1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: 0.01s cubic-bezier(0.2, 0.8, 0.2, 1);
   /* z-index: 2; */
   /* border: 1px solid grey; */
 }
@@ -165,57 +165,84 @@ h1 {
   text-shadow: 10px 10px 10px black;
   cursor: pointer;
   background-color: violet;
+  /* transform: scale(2); */
   
   /* z-index: 2; */
   /* border: 1px solid grey; */
 }
 
 #c0:hover {
-  background: url(./img/background4.jpg);
+  background: url(./img/noncon2020.jpg);
   background-size: cover;
 }
 
-#c1:hover {
-  background: url('https://images.unsplash.com/photo-1569315616076-70bf41b594c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
+#c1:hover {  
+  filter: saturate(0);
+  background: url(./img/unknown.png);
   background-size: cover;
 }
 
 #c2:hover {
-  background: url('https://images.unsplash.com/photo-1584152517971-4394baf9ffdd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+  filter: saturate(0);
+  background: url(./img/ethturin.png);
   background-size: cover;
 }
 
 #c3:hover {
-  background: url('https://images.unsplash.com/photo-1584247792018-3e398414640e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+  filter: saturate(0);
+  background: url(./img/solidity.png);
   background-size: cover;
 }
 
 #c4:hover {
-  background: url('https://images.unsplash.com/photo-1552598715-7eeb9232a2ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+  filter: saturate(0);
+  background: url(./img/dod.png);
   background-size: cover;
 }
 
 #c5:hover {
-  background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+  background: url(./img/metagame.png);
   background-size: cover;
 }
 
 #c6:hover{
-  background: url('https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+  background: url(./img/c6.jpg);
+  background-size: cover;
+}
+
+
+#c7:hover{
+  background: url(./img/c7.jpg);
+  background-size: cover;
+}
+
+
+#c8:hover{
+  background: url(./img/c8.jpg);
+  background-size: cover;
+}
+
+
+#c9:hover{
+  background: url(./img/c9.jpg);
   background-size: cover;
 }
 
 #c10:hover {
-  background: url('./img/noncon2020.jpg');
+  background: url(./img/c10.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#c8:hover {
-  background: url('https://avatars3.githubusercontent.com/u/58242757?s=200&v=4');
+#c11:hover {
+  background: url(./img/c11.jpg);
   background-size: cover;
 }
 
+#c12:hover {
+  background: url(./img/c12.png);
+  background-size: cover;
+}
 
 
 
@@ -224,7 +251,6 @@ h1 {
 .click-zone:hover .click-zone-highlight {
   border: solid 0.5px #00ffbf90;
   box-shadow: 0px 0px 10px #00ffbf;
-
   color: #00ffbf;
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0.247);
   
@@ -235,9 +261,11 @@ h1 {
   /*box-shadow: 0px 0px 10px #00ffbf;*/
   color: #00ffbf00;
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0.0);
-  
 }
 
+.scale {
+  transform: scale(5);
+}
 
 .modal {
   /* display: none; Hidden by default */
