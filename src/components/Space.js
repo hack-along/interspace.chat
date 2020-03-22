@@ -325,9 +325,9 @@ const Space = () => {
             <div
               id="c1"
               className="circle row-2 c-right click-zone"
-              onClick={() => openInNewTab("https://interspace.noncon.org")}
+              onClick={() => openInNewTab("https://nyc.ethglobal.co")}
             >
-              <span className="roomName">NaN</span>
+              <span className="roomName">ETH nyc</span>
             </div>
             <div
               id="c2"
