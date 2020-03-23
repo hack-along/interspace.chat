@@ -7,7 +7,8 @@
 
 * {
   font-family: "Comfortaa","RobotoMono", Courier, monospace;
-  font-weight: 800;
+  font-weight: 300;
+  font-size: 14px;
   color: whitesmoke;
 }
 
@@ -21,31 +22,11 @@ html {
   box-shadow: inset 0px 0px 30px 30px rgba(0,0,0,0.1);
   margin: 0px;
   padding: 0px;
-  @media (max-width: 600px) {
-    top: 0px;
-    position: absolute;
-    min-height: 100vh;
-    background-color: black;
-
-  box-shadow: inset 0px 0px 30px 30px rgba(0,0,0,0);
-  }
 }
 
 body {
   margin: 0;
   padding: 0;
-}
-
-.body {
-  margin: auto;
-}
-
-h1 {
-  margin-left: 50px;
-}
-
-.App {
-  text-align: center;
 }
 
 .App-header {
@@ -172,7 +153,7 @@ h1 {
 }
 
 #c0:hover {
-  background: url(./img/noncon2020.jpg);
+  background: url(./img/noncon.png);
   background-size: cover;
 }
 
