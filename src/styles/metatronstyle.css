@@ -128,9 +128,12 @@ body {
       -webkit-transform: scale(0.1);
       -ms-transform: scale(0.1);
       transform: scale(0.1);
+      /*
       background: -webkit-radial-gradient(50% 50%, 50% 50%, rgba(255, 255, 255, 0.6) 0%, rgba(196, 196, 196, 0) 100%);
       background: -o-radial-gradient(50% 50%, 50% 50%, rgba(255, 255, 255, 0.6) 0%, rgba(196, 196, 196, 0) 100%);
-      background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.6) 0%, rgba(196, 196, 196, 0) 100%); }
+      background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.6) 0%, rgba(196, 196, 196, 0) 100%);
+      */
+    }
     .m-grid-container .circle:hover {
       -webkit-transition: 1s ease-out;
       -o-transition: 1s ease-out;
