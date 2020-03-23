@@ -68,14 +68,20 @@ const Support = () => {
         <ul>
           <StyledListItem>
             <StyledLink href="https://parallele.at">
-              <img src={SupporterParallele} />
+              <img
+                src={SupporterParallele}
+                alt="Supported by Parallele Polis Vienna"
+              />
 
               <StyledSupportertext>Parallele Polis</StyledSupportertext>
             </StyledLink>
           </StyledListItem>
           <StyledListItem>
             <StyledLink href="https://ecosystem.support">
-              <img src={SupporterEcosystem} />
+              <img
+                src={SupporterEcosystem}
+                alt="Supported by Ethereum Ecosystem Supoort"
+              />
 
               <StyledSupportertext>
                 Ethereum Ecosystem Support
@@ -84,14 +90,14 @@ const Support = () => {
           </StyledListItem>
           <StyledListItem>
             <StyledLink href="https://www.ethglobal.co">
-              <img src={SupporterEthglobal} />
+              <img src={SupporterEthglobal} alt="Supported by ETHglobal" />
 
               <StyledSupportertext>ETHglobal</StyledSupportertext>
             </StyledLink>
           </StyledListItem>
           <StyledListItem>
             <StyledLink href="https://gitcoin.co">
-              <img src={SupporterGitcoin} />
+              <img src={SupporterGitcoin} alt="Supported by Gitcoin" />
 
               <StyledSupportertext>Gitcoin</StyledSupportertext>
             </StyledLink>
