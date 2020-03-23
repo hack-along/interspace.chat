@@ -1,20 +1,16 @@
-import React, { Fragment, useContext, useState } from "react";
+import React, { Fragment, useContext } from "react";
 import styled from "styled-components";
 import { BrowserView, MobileView } from "react-device-detect";
 
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
-import { HouseContext } from "../contexts/HouseContext";
+// import { HouseContext } from "../contexts/HouseContext";
 import { SpaceContext } from "../contexts/SpaceContext";
 
 import Room from "./Room";
 import JitsiInstanceMobile from "./integrations/JistiInstanceMobile";
 
 import { RoomNames } from "../utils/constants";
-import Logo from "../img/interspace-logo.png";
-
-const portalStyle = {
-  marginTop: "10px"
-};
+// import Logo from "../img/interspace-logo.png";
 
 const Headline = styled.h6`
   color: whitesmoke;
@@ -77,28 +73,6 @@ const Descripton = styled.div`
 
 const CurrentSpace = styled.span`
   color: whitesmoke;
-`;
-
-const Disclaimer = styled.div`
-  position: relative;
-  top: 800px;
-  background: unset;
-`;
-
-const Watermark = styled.div`
-  position: relative;
-  top: 770px;
-  background: unset;
-  width: 260px;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-`;
-
-const SpaceWindowInfo = styled.p`
-  position: relative;
-  top: 790px;
-  font-size: 2rem;
 `;
 
 const NewRoomLink = styled.a`
@@ -350,7 +324,7 @@ const Space = () => {
               className="circle row-6 c-left click-zone"
               onClick={() => openInNewTab("https://decentralala.com/")}
             >
-              <span className="roomName">DoD</span>
+              <span className="roomName">ETHBerlin</span>
             </div>
             <div
               id="c5"
@@ -360,7 +334,11 @@ const Space = () => {
               <span className="roomName">Metagame</span>
             </div>
 
-            <div id="c6" className="circle row-2 c-center click-zone">
+            <div
+              id="c6"
+              className="circle row-2 c-center click-zone"
+              onClick={() => launchFloatingSpace("calendar")}
+            >
               <span className="roomName">Calendar</span>
             </div>
 
