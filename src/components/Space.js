@@ -317,7 +317,7 @@ const Space = () => {
                 openInNewTab("https://github.com/ethereum/solidity")
               }
             >
-              <span className="roomName">Solidity</span>
+              <span className="roomName">Solidity Summit</span>
             </div>
             <div
               id="c4"
