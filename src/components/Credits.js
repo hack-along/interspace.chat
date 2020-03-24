@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Collapsible from "react-collapsible";
 
+import Titanembeds from "../img/titanembeds.png";
+import Jitsilogo from "../img/jitsi.png";
+
 const CreditsStyled = styled.nav`
   text-align: left;
 
@@ -36,6 +39,15 @@ const StyledListItem = styled.li`
   padding: 1rem;
 `;
 
+const StyledListLink = styled.li`
+  list-style-type: none;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  grid-gap: 0.5rem;
+`;
+
 const Credits = () => {
   return (
     <CreditsStyled>
@@ -50,12 +62,25 @@ const Credits = () => {
         <hr />
         <p>Tech used:</p>
         <ul>
-          <StyledListItem>
-            Powered by{" "}
+          <StyledListLink>
             <a href="https://meet.jit.si">
-              JitSi Open Source Video Conferencing
+              <img src={Jitsilogo} width="30px"></img>
             </a>
-          </StyledListItem>
+            <a href="https://meet.jit.si">
+              Video Conferencing - JitSi Open Source
+            </a>
+          </StyledListLink>
+          <StyledListLink>
+            <a href="https://titanembeds.com">
+              <img src={Titanembeds} width="30px"></img>
+            </a>
+            <a href="https://titanembeds.com">
+              Chat integration - Titan Embeds
+            </a>
+          </StyledListLink>
+        </ul>
+        <hr />
+        <ul>
           <StyledListItem>
             Made with{" "}
             <span role="img" aria-label="heart">
