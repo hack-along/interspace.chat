@@ -64,7 +64,7 @@ const Credits = () => {
         <ul>
           <StyledListLink>
             <a href="https://meet.jit.si">
-              <img src={Jitsilogo} width="30px"></img>
+              <img src={Jitsilogo} width="30px" alt="Jitsi logo"></img>
             </a>
             <a href="https://meet.jit.si">
               Video Conferencing - JitSi Open Source
@@ -72,7 +72,7 @@ const Credits = () => {
           </StyledListLink>
           <StyledListLink>
             <a href="https://titanembeds.com">
-              <img src={Titanembeds} width="30px"></img>
+              <img src={Titanembeds} width="30px" alt="Titanembeds logo"></img>
             </a>
             <a href="https://titanembeds.com">
               Chat integration - Titan Embeds
