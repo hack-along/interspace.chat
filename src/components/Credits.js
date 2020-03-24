@@ -5,6 +5,8 @@ import Collapsible from "react-collapsible";
 import Titanembeds from "../img/titanembeds.png";
 import Jitsilogo from "../img/jitsi.png";
 
+import ShareButton from "./ShareButton";
+
 const CreditsStyled = styled.nav`
   text-align: left;
 
@@ -37,6 +39,7 @@ const CreditsStyled = styled.nav`
 const StyledListItem = styled.li`
   list-style-type: none;
   padding: 1rem;
+  text-align: center;
 `;
 
 const StyledListLink = styled.li`
@@ -57,6 +60,12 @@ const Credits = () => {
           <StyledListItem>
             "Metatron Menu" forked from{" "}
             <a href="https://github.com/MGrudule/metatron">@MGrudule</a>{" "}
+          </StyledListItem>
+          <StyledListItem>
+            "Space Image" by{" "}
+            <a href="https://www.pexels.com/photo/cluster-of-stars-1341279/">
+              Kai Pilger from Pexels
+            </a>{" "}
           </StyledListItem>
         </ul>
         <hr />
@@ -87,6 +96,15 @@ const Credits = () => {
               💝
             </span>{" "}
             by <a href="https://github.com/interspacechat">interspace.chat</a>
+          </StyledListItem>
+          <StyledListItem>
+            Donate to our{" "}
+            <a href="https://gitcoin.co/grants/516/interspacechat">
+              Gitcoin Grant
+            </a>{" "}
+          </StyledListItem>
+          <StyledListItem>
+            <ShareButton />
           </StyledListItem>
         </ul>
       </Collapsible>

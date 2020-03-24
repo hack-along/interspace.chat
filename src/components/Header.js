@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import ShareButton from "./ShareButton";
 import InterspaceLogo from "../img/interspace-logo.png";
 import Logo from "./Logo";
 
