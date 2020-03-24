@@ -14,11 +14,11 @@
 
 html {
   height: 100%;
-  background-color: #002219;
+  background-color: violet;
   background-image: url(./img/background2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-blend-mode: darken;
+  background-blend-mode: multiply;
   box-shadow: inset 0px 0px 30px 30px rgba(0,0,0,0.1);
   margin: 0px;
   padding: 0px;
