@@ -159,13 +159,13 @@ body {
 
 #c1:hover {  
   filter: saturate(0);
-  background: url(./img/unknown.png);
+  background: url(./img/ethturin.png);
   background-size: cover;
 }
 
 #c2:hover {
   filter: saturate(0);
-  background: url(./img/ethturin.png);
+  background: url(./img/ethnyc.png);
   background-size: cover;
 }
 

@@ -27,7 +27,7 @@ let zIndexIterator = 1000;
 const FloatingRoomWindowContainer = styled.div`
   width: ${width}px;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;

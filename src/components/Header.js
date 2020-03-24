@@ -9,14 +9,14 @@ import Help from "./Help";
 
 const HeaderContainer = styled.div`
   position: fixed;
-  top: 20px;
+  top: 0px;
   left: 20px;
   display: grid;
   grid-gap: 0.2rem;
   grid-template-rows: auto auto;
   padding: 1rem;
   justify-items: start;
-  z-index: 1;
+  z-index: 1000000;
 
   :hover {
     opacity: 1;
@@ -25,6 +25,7 @@ const HeaderContainer = styled.div`
 
 const Logotext = styled.h2`
   align-self: flex-end;
+  margin: 0;
 `;
 
 const Logolink = styled.a`

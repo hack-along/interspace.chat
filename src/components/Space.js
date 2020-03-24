@@ -43,7 +43,7 @@ const SpaceSelector = styled.nav`
 
 const SpaceInfo = styled.div`
   text-align: center;
-  padding-top: 4rem;
+  padding-top: 1rem;
   margin: 0 auto;
   font-size: 1rem;
   z-index: 100;
@@ -299,16 +299,16 @@ const Space = () => {
             <div
               id="c1"
               className="circle row-2 c-right click-zone"
-              onClick={() => openInNewTab("https://nyc.ethglobal.co")}
+              onClick={() => openInNewTab("https://ethturin.com/")}
             >
-              <span className="roomName">ETH nyc</span>
+              <span className="roomName">ETHTurin</span>
             </div>
             <div
               id="c2"
               className="circle row-6 c-right click-zone"
-              onClick={() => openInNewTab("https://ethturin.com/")}
+              onClick={() => openInNewTab("https://nyc.ethglobal.co")}
             >
-              <span className="roomName">ETHTurin</span>
+              <span className="roomName">ETH nyc</span>
             </div>
             <div
               id="c3"
