@@ -17,7 +17,7 @@ html {
   background-color: rgb(36, 36, 36);
   background-image: url(./img/spacebackground3.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-blend-mode: soft-light;
   box-shadow: inset 0px 0px 30px 30px rgba(0,0,0,0.1);
   margin: 0px;
@@ -224,10 +224,6 @@ body {
   background: url(./img/c12.png);
   background-size: cover;
 }
-
-
-
-
 
 .click-zone:hover .click-zone-highlight {
   border: solid 0.5px #00ffbf90;
