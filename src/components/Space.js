@@ -1,5 +1,6 @@
 import React, { Fragment, useContext } from "react";
 import styled from "styled-components";
+
 import { BrowserView, MobileView } from "react-device-detect";
 
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
@@ -97,56 +98,22 @@ const MobileSelectorContainer = styled.div`
 `;
 
 const Space = () => {
-  const { currentFloatingSpaces, setFloatingSpaces } = useContext(
+  const { currentFloatingSpaces, addFloatingSpace } = useContext(
     FloatingSpaceContext
   );
-  const { currentSpace } = useContext(SpaceContext);
-  // const [modalOpen, setModalOpen] = useState(true);
-  const launchFloatingSpace = floatingSpace => {
-    let resultantSpaces = null;
-    if (currentFloatingSpaces && currentFloatingSpaces.length > 0) {
-      if (currentFloatingSpaces.indexOf(floatingSpace) > -1) {
-        resultantSpaces = currentFloatingSpaces;
-      } else if (RoomNames.indexOf(floatingSpace) > -1) {
-        let replaceIndex;
-        for (let instance of RoomNames) {
-          if (currentFloatingSpaces.indexOf(instance) > -1) {
-            replaceIndex = currentFloatingSpaces.indexOf(instance);
-          }
-        }
-        if (replaceIndex > -1) {
-          let spliceJitsiDuplicates = [...currentFloatingSpaces]; // Prepare for splice
-          spliceJitsiDuplicates.splice(replaceIndex, 1, floatingSpace);
-          resultantSpaces = [...spliceJitsiDuplicates];
-        } else {
-          resultantSpaces = [...currentFloatingSpaces, floatingSpace];
-        }
-      } else {
-        resultantSpaces = [...currentFloatingSpaces, floatingSpace];
-      }
-    } else {
-      resultantSpaces = [floatingSpace];
-    }
-    setFloatingSpaces(resultantSpaces);
-  };
 
-  const displayJoinedSpaces = floatingSpaceWindows => {
-    let windowsWithoutPlaceholders = floatingSpaceWindows.filter(item => item);
-    if (windowsWithoutPlaceholders.length > 0) {
-      if (windowsWithoutPlaceholders.length > 2) {
-        let nameCount = windowsWithoutPlaceholders.length;
-        return (
-          windowsWithoutPlaceholders.slice(0, nameCount - 2).join(", ") +
-          ", " +
-          windowsWithoutPlaceholders.slice(nameCount - 2, nameCount).join(" & ")
-        );
-      } else {
-        return windowsWithoutPlaceholders.join(" & ");
-      }
+  let displayedJoinedSpaces;
+  if (currentFloatingSpaces.length > 0) {
+    if (currentFloatingSpaces.length > 2) {
+      let nameCount = currentFloatingSpaces.length;
+      displayedJoinedSpaces =
+        currentFloatingSpaces.slice(0, nameCount - 2).join(", ") +
+        ", " +
+        currentFloatingSpaces.slice(nameCount - 2, nameCount).join(" & ");
     } else {
-      return null;
+      displayedJoinedSpaces = currentFloatingSpaces.join(" & ");
     }
-  };
+  }
 
   const openInNewTab = url => {
     let win = window.open(url, "_blank");
@@ -203,13 +170,10 @@ const Space = () => {
         </span>
         */}
           <SpaceInfo>
-            {displayJoinedSpaces(currentFloatingSpaces) ? (
+            {displayedJoinedSpaces ? (
               <Fragment>
-                You are in{" "}
-                <CurrentSpace>
-                  {displayJoinedSpaces(currentFloatingSpaces)}
-                </CurrentSpace>
-                !
+                You're in the{" "}
+                <CurrentSpace>{displayedJoinedSpaces}</CurrentSpace>!
               </Fragment>
             ) : (
               <Fragment>
@@ -294,7 +258,7 @@ const Space = () => {
             <div
               id="c1"
               className="circle row-2 c-right click-zone"
-              onClick={() => launchFloatingSpace("capsule2")}
+              onClick={() => addFloatingSpace("capsule2")}
             >
               <span className="roomName">Capsule 2</span>
             </div>
@@ -322,7 +286,7 @@ const Space = () => {
             <div
               id="c5"
               className="circle row-2 c-left click-zone"
-              onClick={() => launchFloatingSpace("capsule1")}
+              onClick={() => addFloatingSpace("capsule1")}
             >
               <span className="roomName">Capsule 1</span>
             </div>
@@ -330,7 +294,7 @@ const Space = () => {
             <div
               id="c6"
               className="circle row-2 c-center click-zone"
-              onClick={() => launchFloatingSpace("chat")}
+              onClick={() => addFloatingSpace("discord chat")}
             >
               <span className="roomName">Discord chat</span>
             </div>
@@ -347,7 +311,7 @@ const Space = () => {
             <div
               id="c9"
               className="circle row-6 c-center click-zone"
-              onClick={() => launchFloatingSpace("loft.radio")}
+              onClick={() => addFloatingSpace("loft.radio")}
             >
               <span className="roomName">loft.radio</span>
             </div>
@@ -363,7 +327,7 @@ const Space = () => {
             <div
               id="c12"
               className="circle row-4 c-center click-zone"
-              onClick={() => launchFloatingSpace("calendar")}
+              onClick={() => addFloatingSpace("calendar")}
             >
               <span className="roomName">Event calendar</span>
             </div>

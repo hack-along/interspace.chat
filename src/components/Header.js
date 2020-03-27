@@ -16,7 +16,6 @@ const HeaderContainer = styled.div`
   grid-template-rows: auto auto;
   padding: 1rem;
   justify-items: start;
-  z-index: 100;
 
   :hover {
     opacity: 1;
