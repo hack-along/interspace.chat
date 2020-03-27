@@ -1,13 +1,11 @@
 import React, { useEffect, useContext, useReducer } from "react";
 import styled from "styled-components";
 import { Rnd } from "react-rnd";
-import Collapsible from "react-collapsible";
 
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
 import LoftRadioInstance from "./integrations/LoftRadioInstance";
 import ChatInstance from "./integrations/ChatInstance";
 import CalendarInstance from "./integrations/CalendarInstance";
-import JitsiInstance from "./integrations/JitsiInstance";
 import RoomInstance from "./RoomInstance";
 import { RoomNames } from "../utils/constants";
 
@@ -65,35 +63,6 @@ const Closer = styled.div`
   }
 `;
 
-const ChatStyle = styled.span`
-  padding: 1rem;
-
-  .Collapsible__trigger {
-    color: black;
-    background-color: whitesmoke;
-    cursor: pointer;
-    padding: 0.2rem;
-    :hover {
-      background-color: #00ffbf;
-    }
-  }
-  .Collapsible__contentOuter {
-    :hover {
-      .Collapsible__contentInner {
-      }
-    }
-  }
-  .Collapsible__contentInner {
-    padding: 0.5rem;
-
-    a {
-      color: #00ffbf;
-    }
-  }
-`;
-
-const RoomWithChat = styled.div``;
-
 function getFloatingRoomWindow(windowKey) {
   if (windowKey === "loft.radio") {
     return <LoftRadioInstance />;
@@ -133,7 +102,7 @@ function FloatingRoomWindow() {
         setZIndexes({ key: space, value: ++tempMax });
       }
     });
-  }, [currentFloatingSpaces]);
+  }, [currentFloatingSpaces, maxZ, zIndexes]);
 
   function setWindowFocus(windowKey) {
     setZIndexes({ key: windowKey, value: maxZ + 1 });

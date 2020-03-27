@@ -12,10 +12,10 @@ const JitsiInstance = ({ width, height, roomData }) => {
       width: "100%",
       height: "100%",
       parentNode: root.current,
-      interfaceConfigOverwrite: { defaultLanguage: `de` },
-      interfaceConfigOverwrite: { TOOLBAR_ALWAYS_VISIBLE: "true" },
-      interfaceConfigOverwrite: { INITIAL_TOOLBAR_TIMEOUT: 200000 },
       interfaceConfigOverwrite: {
+        defaultLanguage: `de`,
+        TOOLBAR_ALWAYS_VISIBLE: "true",
+        INITIAL_TOOLBAR_TIMEOUT: 200000,
         TOOLBAR_BUTTONS: [
           "microphone",
           "camera",

@@ -4,14 +4,9 @@ import styled from "styled-components";
 import { BrowserView, MobileView } from "react-device-detect";
 
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
-// import { HouseContext } from "../contexts/HouseContext";
-import { SpaceContext } from "../contexts/SpaceContext";
 
 import Room from "./Room";
 import JitsiInstanceMobile from "./integrations/JistiInstanceMobile";
-
-import { RoomNames } from "../utils/constants";
-// import Logo from "../img/interspace-logo.png";
 
 const Headline = styled.h6`
   color: whitesmoke;
@@ -74,13 +69,6 @@ const Descripton = styled.div`
 
 const CurrentSpace = styled.span`
   color: whitesmoke;
-`;
-
-const NewRoomLink = styled.a`
-  font-weight: 100;
-  font-size: 1rem;
-  color: violet;
-  text-decoration-color: violet;
 `;
 
 const MobileContainer = styled.div`

@@ -45,25 +45,13 @@ const RoomInstance = ({ space }) => {
     Object.keys(roomURLs).includes(serviceName)
   );
 
-  const [selectedServiceName, selectServiceName] = useState(
-    availableServiceNames[0]
-  );
+  const [selectedServiceName] = useState(availableServiceNames[0]);
 
   if (availableServiceNames.length === 0) return <div>Unknown room</div>;
 
   const roomData = roomURLs[selectedServiceName];
   const selectedService = SERVICES[selectedServiceName];
   const RoomServiceComponent = selectedService.component;
-
-  function onServiceClick(name) {
-    const service = SERVICES[name];
-    if (service.external) {
-      const roomData = roomURLs[name];
-      window.open(roomData.externalUrl);
-    } else {
-      selectServiceName(name);
-    }
-  }
 
   return (
     <Container>

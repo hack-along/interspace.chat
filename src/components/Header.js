@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import InterspaceLogo from "../img/interspace-logo.png";
-import Logo from "./Logo";
 
 import Credits from "./Credits";
 import Support from "./Support";
