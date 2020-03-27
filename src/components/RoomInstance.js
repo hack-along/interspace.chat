@@ -37,7 +37,9 @@ const ChatButton = styled.button`
 `;
 
 const RoomInstance = ({ space }) => {
-  const { addFloatingSpace } = useContext(FloatingSpaceContext);
+  const { currentFloatingSpaces, addFloatingSpace } = useContext(
+    FloatingSpaceContext
+  );
   const roomURLs = RoomURLs[space];
   const availableServiceNames = Object.keys(SERVICES).filter(serviceName =>
     Object.keys(roomURLs).includes(serviceName)
@@ -66,9 +68,11 @@ const RoomInstance = ({ space }) => {
   return (
     <Container>
       <RoomServiceComponent roomData={roomData} />
-      <ChatButton onClick={() => addFloatingSpace("discord chat")}>
-        Open Chat
-      </ChatButton>
+      {currentFloatingSpaces.indexOf("discord chat") === -1 ? (
+        <ChatButton onClick={() => addFloatingSpace("discord chat")}>
+          Open Chat
+        </ChatButton>
+      ) : null}
     </Container>
   );
 };
