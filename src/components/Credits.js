@@ -58,11 +58,21 @@ const Credits = () => {
         <ul>
           <StyledListItem>
             "Metatron Menu" forked from{" "}
-            <a href="https://github.com/MGrudule/metatron">@MGrudule</a>{" "}
+            <a
+              href="https://github.com/MGrudule/metatron"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @MGrudule
+            </a>{" "}
           </StyledListItem>
           <StyledListItem>
             "Space Image" by{" "}
-            <a href="https://www.pexels.com/photo/cluster-of-stars-1341279/">
+            <a
+              href="https://www.pexels.com/photo/cluster-of-stars-1341279/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Kai Pilger from Pexels
             </a>{" "}
           </StyledListItem>
@@ -71,18 +81,34 @@ const Credits = () => {
         <p>Tech used:</p>
         <ul>
           <StyledListLink>
-            <a href="https://meet.jit.si">
+            <a
+              href="https://meet.jit.si"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={Jitsilogo} width="30px" alt="Jitsi logo"></img>
             </a>
-            <a href="https://meet.jit.si">
+            <a
+              href="https://meet.jit.si"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Video Conferencing - JitSi Open Source
             </a>
           </StyledListLink>
           <StyledListLink>
-            <a href="https://titanembeds.com">
+            <a
+              href="https://titanembeds.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={Titanembeds} width="30px" alt="Titanembeds logo"></img>
             </a>
-            <a href="https://titanembeds.com">
+            <a
+              href="https://titanembeds.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Chat integration - Titan Embeds
             </a>
           </StyledListLink>
@@ -94,17 +120,32 @@ const Credits = () => {
             <span role="img" aria-label="heart">
               💝
             </span>{" "}
-            by <a href="https://github.com/interspacechat">interspace.chat</a>
+            by{" "}
+            <a
+              href="https://github.com/interspacechat"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              interspace.chat
+            </a>
           </StyledListItem>
           <StyledListItem>
             Donate to our{" "}
-            <a href="https://gitcoin.co/grants/516/interspacechat">
+            <a
+              href="https://gitcoin.co/grants/516/interspacechat"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Gitcoin Grant
             </a>{" "}
           </StyledListItem>
           <StyledListItem>
             or directly to{" "}
-            <a href="https://etherscan.io/address/support.interspacechat.eth">
+            <a
+              href="https://etherscan.io/address/support.interspacechat.eth"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               support.interspacechat.eth
             </a>{" "}
           </StyledListItem>

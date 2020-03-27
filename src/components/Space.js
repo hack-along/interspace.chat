@@ -111,52 +111,7 @@ const Space = () => {
   return (
     <SpaceSelector>
       <BrowserView>
-        {/*modalOpen && (
-					<div id='myModal' class='modal'>
-						<div class='modal-content'>
-							<img src={Logo} alt='logo' className='modal_logo'></img>
-							<p className='modal_text'>
-								Genieße die lauschige Atmosphäre in unserer Taverne.
-							</p>
-							<p className='modal_text'>
-								Setz dich an einen Tisch der Dir zusagt.
-							</p>
-							<p className='modal_text'>
-								Bevorzugt Chrome, screen sharing benötigt die Jitsi Chrome
-								Extension.
-							</p>
-							<p className='modal_text'>
-								Die Chat logs sind nicht öffentlich, aber werden bei Dir lokal
-								gespeichert, bitte schreibe keine sensitiven Daten in den Chat.
-							</p>
-							<button
-								onClick={() => setModalOpen(false)}
-								className='modal-close'>
-								Ich verstehe
-							</button>
-						</div>
-					</div>
-				)*/}
         <span>
-          {/*
-					<Headline>
-						Welcome to{' '}
-						<a
-							href='https://interspace.chat'
-							target='_blank'
-							rel='noopener noreferrer'
-							style={{ textDecoration: 'none' }}>
-							Interspace.Chat
-						</a>
-					</Headline>
-					
-        <span>
-          Come to the chat on{" "}
-          <a href="https://t.me/intercon13" target="_blank">
-            Telegram
-          </a>
-        </span>
-        */}
           <SpaceInfo>
             {displayedJoinedSpaces ? (
               <Fragment>

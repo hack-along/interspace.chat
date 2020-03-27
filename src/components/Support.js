@@ -64,7 +64,11 @@ const Support = () => {
         <p>Supported by:</p>
         <ul>
           <StyledListItem>
-            <StyledLink href="https://parallele.at">
+            <StyledLink
+              href="https://parallele.at"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src={SupporterParallele}
                 alt="Supported by Parallele Polis Vienna"

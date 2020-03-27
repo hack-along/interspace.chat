@@ -52,7 +52,13 @@ const Help = () => {
         <ul>
           <StyledListItem>
             The text chat can be used by registering on our{" "}
-            <a href="https://discord.gg/YStg9p9">Discord Server</a>
+            <a
+              href="https://discord.gg/YStg9p9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Discord Server
+            </a>
           </StyledListItem>
         </ul>
         <hr />
