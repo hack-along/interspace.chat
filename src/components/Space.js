@@ -299,15 +299,9 @@ const Space = () => {
               <span className="roomName">Discord chat</span>
             </div>
 
-            <div
-              id="c7"
-              className="circle row-3 c-center-right click-zone"
-            ></div>
+            <div id="c7" className="circle row-3 c-center-right"></div>
 
-            <div
-              id="c8"
-              className="circle row-5 c-center-right click-zone"
-            ></div>
+            <div id="c8" className="circle row-5 c-center-right"></div>
             <div
               id="c9"
               className="circle row-6 c-center click-zone"
@@ -315,14 +309,8 @@ const Space = () => {
             >
               <span className="roomName">loft.radio</span>
             </div>
-            <div
-              id="c10"
-              className="circle row-5 c-center-left click-zone"
-            ></div>
-            <div
-              id="c11"
-              className="circle row-3 c-center-left click-zone"
-            ></div>
+            <div id="c10" className="circle row-5 c-center-left"></div>
+            <div id="c11" className="circle row-3 c-center-left"></div>
 
             <div
               id="c12"
