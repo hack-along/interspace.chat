@@ -76,6 +76,7 @@ const Support = () => {
               <StyledSupportertext>Parallele Polis</StyledSupportertext>
             </StyledLink>
           </StyledListItem>
+          {/*
           <StyledListItem>
             <StyledLink href="https://ecosystem.support">
               <img
@@ -102,6 +103,7 @@ const Support = () => {
               <StyledSupportertext>Gitcoin</StyledSupportertext>
             </StyledLink>
           </StyledListItem>
+*/}
         </ul>
       </Collapsible>
     </SupportStyled>

@@ -45,7 +45,7 @@ const Help = () => {
           <StyledListItem>
             This website is making it easy for users to meet in the same rooms
             to have a video call. <br></br>We use it for conferences and
-            gatherings <a href="https://interspace.chat">Home</a>{" "}
+            gatherings{" "}
           </StyledListItem>
         </ul>
         <p>Textchat:</p>
