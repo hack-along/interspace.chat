@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
+
+import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
 
 import { RoomURLs } from "../utils/constants";
 import JitsiInstance from "./integrations/JitsiInstance";
+import ChatInstance from "./integrations/ChatInstance";
 // import YoutubeInstance from './integrations/YoutubeInstance';
 // import HubInstance from './integrations/HubInstance';
 
@@ -10,49 +13,31 @@ const SERVICES = {
   jitsi: {
     title: "Videochat",
     component: JitsiInstance
-  } /*
-  {
-  ,
-  youtube: {
-    title: 'Youtube',
-    component: () => null,
-    external: true,
   },
-  mozillaHub: {
-    title: 'Virtual Hub',
-    component: () => null,
-    external: true,
-  },
-*/
+  chat: {
+    title: "chat",
+    component: ChatInstance
+  }
 };
 
-const ServiceButtonContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  background-color: black;
-  border-bottom: 1px solid white;
-`;
-
-const ServiceButton = styled.div`
+const Container = styled.div`
   height: 100%;
-  flex-grow: 1;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  &:hover {
-    background-color: #616161;
-  }
-  &.active {
-    background-color: #423838;
-  }
+  flex-direction: column;
+  justify-content: flex-start;
 `;
 
-const RoomInstance = ({ width, height, space }) => {
+const ChatButton = styled.button`
+  min-height: 20px;
+  max-width: 100px;
+  color: black;
+  align-self: flex-end;
+  margin-top: 15px;
+`;
+
+const RoomInstance = ({ space }) => {
+  const { addFloatingSpace } = useContext(FloatingSpaceContext);
   const roomURLs = RoomURLs[space];
   const availableServiceNames = Object.keys(SERVICES).filter(serviceName =>
     Object.keys(roomURLs).includes(serviceName)
@@ -79,27 +64,12 @@ const RoomInstance = ({ width, height, space }) => {
   }
 
   return (
-    <div>
-      {/*
-			<ServiceButtonContainer>
-				{availableServiceNames.map(serviceName => (
-					<ServiceButton
-						key={serviceName}
-						onClick={() => onServiceClick(serviceName)}
-						className={selectedServiceName === serviceName && 'active'}>
-						<span>{SERVICES[serviceName].title}</span>
-						{SERVICES[serviceName].external && (
-							<i
-								className='fas fa-external-link-alt'
-								style={{ marginLeft: 10 }}
-							/>
-						)}
-					</ServiceButton>
-				))}
-			</ServiceButtonContainer>
-            */}
-      <RoomServiceComponent width={width} height={height} roomData={roomData} />
-    </div>
+    <Container>
+      <RoomServiceComponent roomData={roomData} />
+      <ChatButton onClick={() => addFloatingSpace("discord chat")}>
+        Open Chat
+      </ChatButton>
+    </Container>
   );
 };
 

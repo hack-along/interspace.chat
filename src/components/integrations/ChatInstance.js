@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { FloatingSpaceContext } from "../../contexts/FloatingSpaceContext";
 
-function ChatInstance({ width, height, space }) {
+function ChatInstance() {
   const [discordRoom, setDiscordRoom] = useState("690315812002988361");
+  const { currentFloatingSpaces } = useContext(FloatingSpaceContext);
+  const space = currentFloatingSpaces;
 
   useEffect(() => {
     if (space.indexOf("capsule1") > -1) {
@@ -12,18 +15,16 @@ function ChatInstance({ width, height, space }) {
       setDiscordRoom("690315812002988361");
     }
     return console.log(discordRoom);
-  });
+  }, [space, discordRoom]);
 
   return (
-    <div>
-      <iframe
-        src={`https://titanembeds.com/embed/690315811293888778?css=85&defaultchannel=${discordRoom}&theme=DiscordDark`}
-        width={width}
-        height={height}
-        frameBorder="0"
-        title="chat"
-      ></iframe>
-    </div>
+    <iframe
+      src={`https://titanembeds.com/embed/690315811293888778?css=85&defaultchannel=${discordRoom}&theme=DiscordDark`}
+      width="100%"
+      height="100%"
+      frameBorder="0"
+      title="discord chat"
+    ></iframe>
   );
 }
 
