@@ -389,16 +389,13 @@ const Space = () => {
             </a>
           </Headline>
           <Descripton>
-            <p> Click on a room to enter</p>
+            <p> Click below to enter the videochat</p>
 
             <a href="https://portal.interspace.chat">or open a new room</a>
           </Descripton>
           <MobileSelectorContainer>
-            <Room roomName="room1" />
-            <Room roomName="room2" />
-            <Room roomName="room3" />
-            <Room roomName="room4" />
-            <Room roomName="room5" />
+            <Room roomName="capsule1" />
+            <Room roomName="capsule2" />
           </MobileSelectorContainer>
           <JitsiInstanceMobile />
         </MobileContainer>
