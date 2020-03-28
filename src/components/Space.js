@@ -215,7 +215,7 @@ const Space = () => {
             <div
               id="c3"
               className="circle row-7 c-center click-zone"
-              onClick={() => openInNewTab("https://interspace.noncon.org")}
+              onClick={() => openInNewTab("https://noncon.interspace.chat")}
             >
               <span className="roomName">NonCon</span>
             </div>
