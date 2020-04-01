@@ -37,6 +37,8 @@ React app to get together.
    of the load balancer.
 2. Point a subdomain of example.com of your choice, e.g. portal.example.com, to the IP address of your server
    running JitSi. That means *hostname* here is portal.example.com and target is for example 101.101.10.10. 
+3. In the Netlify settings of the app, navigate to *Settings > domain management* and add example.com to the
+   *Custom domains* section. Netlify should also sort you out with a TLS certificate. 
 
 Hooray! That should be it. You might have to wait a little bit for the routing changes for the DNS
 to propagate. You can often influence that by changing the TTL values in the DNS records to whatever minimum
