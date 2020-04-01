@@ -29,7 +29,7 @@ simple. Congrats, you will now have yourself the app running under a netlify sub
 to use it with JitSi, because the server running JitSi and the app still ive in separate realms.
 
 Now off to the slightly niftier part. Let's say you got yourself a url called example.com on which you want to run the whole shebang. 
-In your DNS setting you essentially need to make two changes that will allow for the JitSi server and the
+In your DNS setting you essentially need to make two (and a half) changes that will allow for the JitSi server and the
 React app to get together. 
 
 1. Point the default A name record to the Netlify load balancer which has a static IP address 104.198.14.52.
