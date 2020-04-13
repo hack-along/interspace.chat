@@ -1,50 +1,32 @@
 @font-face {
   font-family: 'Comfortaa';
   font-style: normal;
-  font-weight: 800;
+  font-weight: 300;
 }
+
 
 * {
   font-family: "Comfortaa","RobotoMono", Courier, monospace;
-  font-weight: 800;
+  font-weight: 300;
+  font-size: 14px;
   color: whitesmoke;
 }
 
 html {
   height: 100%;
-  background-color: #002219;
-  background-image: url(./img/background2.jpg);
+  background-color: rgb(36, 36, 36);
+  background-image: url(./img/spacebackground3.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: darken;
+  background-repeat: repeat;
+  background-blend-mode: soft-light;
   box-shadow: inset 0px 0px 30px 30px rgba(0,0,0,0.1);
   margin: 0px;
   padding: 0px;
-  @media (max-width: 600px) {
-    top: 0px;
-    position: absolute;
-    min-height: 100vh;
-    background-color: black;
-
-  box-shadow: inset 0px 0px 30px 30px rgba(0,0,0,0);
-  }
 }
 
 body {
   margin: 0;
   padding: 0;
-}
-
-.body {
-  margin: auto;
-}
-
-h1 {
-  margin-left: 50px;
-}
-
-.App {
-  text-align: center;
 }
 
 .App-header {
@@ -73,14 +55,13 @@ h1 {
   /* border: 1px solid grey; */
 }
 .click-zone-mobile:hover {
-  background-color: white;
   cursor: pointer;
   /* z-index: 2; */
   /* border: 1px solid grey; */
 }
 
 .roomFont {
-  padding: 0.5rem;
+  
   color: #00ffbf90;
   font-weight: 800;
   font-size: 1.1rem;
@@ -97,21 +78,23 @@ h1 {
 
 .roomName {
   font-family: "Comfortaa","Roboto", "Courier New", Courier, monospace;
-  font-size: 2rem;
+  font-size: 1rem;
   position: relative;
-  top: 55px;
-  color: #00ffbf00;
+  top: 67px;
+  justify-self: center;
+  text-align: center;
+  color: whitesmoke;
+  
   /* font-size: 12px; */
   /* display: block; */
-  padding: auto;
+  
   /* margin-top: -20px; */
-  background-image: unset;
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
   transition: 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .roomName:hover {
-  
+  background-color: black;
 }
 
 .active {
@@ -150,92 +133,113 @@ h1 {
 
 .m-grid-container {
   position: fixed;
-  left: 30vw;
+  left: 32vw;
   top: 18vh;
 }
 
 .click-zone {
-  transition: 0.1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: 0.01s cubic-bezier(0.2, 0.8, 0.2, 1);
   /* z-index: 2; */
   /* border: 1px solid grey; */
 }
 .click-zone:hover {
   text-shadow: 10px 10px 10px black;
   cursor: pointer;
-  background-color: violet;
+  
+  /* transform: scale(2); */
   
   /* z-index: 2; */
   /* border: 1px solid grey; */
 }
 
-#c0 {
-  background: url(./img/background4.jpg);
+#c0:hover {
+  background: url(./img/c12.png);
   background-size: cover;
 }
 
-#c1 {
-  background: url('https://images.unsplash.com/photo-1569315616076-70bf41b594c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
+#c1:hover {  
+  background: url(./img/c10.jpg);
   background-size: cover;
 }
 
-#c2 {
-  background: url('https://images.unsplash.com/photo-1584152517971-4394baf9ffdd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+#c2:hover {
+  filter: saturate(0);
+  background: url(./img/ethturin.png);
   background-size: cover;
 }
 
-#c3 {
-  background: url('https://images.unsplash.com/photo-1584247792018-3e398414640e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+#c3:hover {
+  background: url(./img/noncon.png);
   background-size: cover;
 }
 
-#c4 {
-  background: url('https://images.unsplash.com/photo-1552598715-7eeb9232a2ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+#c4:hover {
+  background: url(./img/metagame.png);
   background-size: cover;
 }
 
-#c5 {
-  background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+#c5:hover {
+  background: url(./img/c8.jpg);
+  
   background-size: cover;
 }
 
-#c6{
-  background: url('https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+#c6:hover{
+  background: url(./img/c7.jpg);
   background-size: cover;
 }
 
-#c10 {
-  background: url('./img/noncon2020.jpg');
+
+#c7:hover{
+  background-size: cover;
+}
+
+
+#c8:hover{
+  
+  background-size: cover;
+}
+
+
+#c9:hover{
+  background: url(./img/c9.jpg);
+  background-size: cover;
+}
+
+#c10:hover {
+  
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#c8 {
-  background: url('https://avatars3.githubusercontent.com/u/58242757?s=200&v=4');
+#c11:hover {
+  
   background-size: cover;
 }
 
-
-
-
-
+#c12:hover {
+  background: url(./img/c6.jpg);
+  background-size: cover;
+}
 
 .click-zone:hover .click-zone-highlight {
   border: solid 0.5px #00ffbf90;
   box-shadow: 0px 0px 10px #00ffbf;
-
   color: #00ffbf;
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0.247);
   
 }
 
 .click-zone:hover .roomName {
-  background-color: #00000080;
-  box-shadow: 0px 0px 10px #00ffbf;
-  color: #00ffbf99;
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.247);
-  
+  background-color: #00000000;
+  /*box-shadow: 0px 0px 10px #00ffbf;*/
+  color: #00ffbf00;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.0);
 }
 
+.scale {
+  transform: scale(5);
+}
 
 .modal {
   /* display: none; Hidden by default */
