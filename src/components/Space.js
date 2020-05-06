@@ -191,55 +191,13 @@ const Space = () => {
                 />
               </g>
             </svg>
-            <div
-              id="c0"
-              className="circle row-1 c-center c-1 click-zone"
-              onClick={() => openInNewTab("https://portal.interspace.chat")}
-            >
-              <span className="roomName">Launch new capsule</span>
-            </div>
-            <div
-              id="c1"
-              className="circle row-2 c-right click-zone"
-              onClick={() => addFloatingSpace("capsule2")}
-            >
-              <span className="roomName">Capsule 2</span>
-            </div>
-            <div
-              id="c2"
-              className="circle row-6 c-right click-zone"
-              onClick={() => openInNewTab("https://ethturin.com/")}
-            >
-              <span className="roomName">ETHTurin</span>
-            </div>
-            <div
-              id="c3"
-              className="circle row-7 c-center click-zone"
-              onClick={() => openInNewTab("https://noncon.interspace.chat")}
-            >
-              <span className="roomName">NonCon</span>
-            </div>
-            <div
-              id="c4"
-              className="circle row-6 c-left click-zone"
-              onClick={() => openInNewTab("https://interspace.metagame.wtf")}
-            >
-              <span className="roomName">Metagame</span>
-            </div>
-            <div
-              id="c5"
-              className="circle row-2 c-left click-zone"
-              onClick={() => addFloatingSpace("capsule1")}
-            >
-              <span className="roomName">Capsule 1</span>
-            </div>
 
             <div
               id="c6"
               className="circle row-2 c-center click-zone"
               onClick={() => addFloatingSpace("discord chat")}
             >
-              <span className="roomName">Discord chat</span>
+              <span className="roomName">Get in line</span>
             </div>
 
             <div id="c7" className="circle row-3 c-center-right"></div>
@@ -250,7 +208,7 @@ const Space = () => {
               className="circle row-6 c-center click-zone"
               onClick={() => addFloatingSpace("loft.radio")}
             >
-              <span className="roomName">loft.radio</span>
+              <span className="roomName">Enter VR</span>
             </div>
             <div id="c10" className="circle row-5 c-center-left"></div>
             <div id="c11" className="circle row-3 c-center-left"></div>

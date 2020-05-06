@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import Credits from "./Credits";
-import Support from "./Support";
 import Help from "./Help";
 
 const HeaderContainer = styled.div`
@@ -40,7 +39,6 @@ const Header = () => {
         <Logotext>interspace.chat</Logotext>
       </Logolink>
       <Help />
-      <Support />
       <Credits />
     </HeaderContainer>
   );

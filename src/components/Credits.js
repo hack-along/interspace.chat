@@ -5,8 +5,6 @@ import Collapsible from "react-collapsible";
 import Titanembeds from "../img/titanembeds.png";
 import Jitsilogo from "../img/jitsi.png";
 
-import ShareButton from "./ShareButton";
-
 const CreditsStyled = styled.nav`
   text-align: left;
 
@@ -116,11 +114,11 @@ const Credits = () => {
         <hr />
         <ul>
           <StyledListItem>
-            Made with{" "}
+            Forked with{" "}
             <span role="img" aria-label="heart">
               💝
             </span>{" "}
-            by{" "}
+            from{" "}
             <a
               href="https://github.com/interspacechat"
               target="_blank"
@@ -128,30 +126,6 @@ const Credits = () => {
             >
               interspace.chat
             </a>
-          </StyledListItem>
-          <StyledListItem>
-            Donate to our{" "}
-            <a
-              href="https://gitcoin.co/grants/516/interspacechat"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Gitcoin Grant
-            </a>{" "}
-          </StyledListItem>
-          <StyledListItem>
-            or directly to{" "}
-            <a
-              href="https://etherscan.io/address/support.interspacechat.eth"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              support.interspacechat.eth
-            </a>{" "}
-          </StyledListItem>
-          <StyledListItem>
-            Spread the word
-            <ShareButton />
           </StyledListItem>
         </ul>
       </Collapsible>
