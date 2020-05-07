@@ -16,6 +16,7 @@ const HelpStyled = styled.nav`
   }
   .Collapsible__contentOuter {
     max-width: 300px;
+    background-color: #333;
 
     :hover {
       .Collapsible__contentInner {

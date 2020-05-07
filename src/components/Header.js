@@ -36,7 +36,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <Logolink href="/">
-        <Logotext>interspace.chat</Logotext>
+        <Logotext>Solarpunk VR Party</Logotext>
       </Logolink>
       <Help />
       <Credits />

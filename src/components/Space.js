@@ -69,6 +69,7 @@ const Descripton = styled.div`
 
 const Circle = styled.span`
   position: absolute;
+  z-index: -1;
   display: inline-block;
   border-radius: 50%;
   top: 10%;
