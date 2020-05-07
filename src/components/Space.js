@@ -67,6 +67,17 @@ const Descripton = styled.div`
   }
 `;
 
+const Circle = styled.span`
+  position: absolute;
+  display: inline-block;
+  border-radius: 50%;
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  background-color: #bbb;
+`;
+
 const CurrentSpace = styled.span`
   color: whitesmoke;
 `;
@@ -111,122 +122,54 @@ const Space = () => {
   return (
     <SpaceSelector>
       <BrowserView>
-        <span>
-          <SpaceInfo>
-            {displayedJoinedSpaces ? (
-              <Fragment>
-                You're in the{" "}
-                <CurrentSpace>{displayedJoinedSpaces}</CurrentSpace>!
-              </Fragment>
-            ) : (
-              <Fragment>
-                <div>Click on a portal</div>
-              </Fragment>
-            )}
-          </SpaceInfo>
-        </span>
-        <div>
-          <div className="m-grid-container">
-            <svg
-              className="frame"
-              // xmlns:svg='http://www.w3.org/2000/svg'
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid meet"
-              viewBox="1 1 36 40"
-              id="svg"
-            >
-              <g id="shapes">
-                <path
-                  className="path-hex "
-                  d="M 19,5 L 33,13 L 33,29 L 19,37 L 5,29 L 5,13 L 19,5 z "
-                  id="octagon"
-                />
-                <path
-                  className="path-hex "
-                  d="M 19,5 L 5,29 L 33,29 L 19,5 z "
-                  id="triange-up"
-                />
-                <path
-                  className="path-hex "
-                  d="M 5,13 L 19,37 L 33,13 L 5,13 z "
-                  id="triange-down"
-                />
-                <path
-                  className="path-hex inner"
-                  d="M 19,13 L 12,17 L 12,25 L 19,29 L 26,25 L 26,17 L 19,13 z "
-                  id="octagon-inner"
-                />
-                <path
-                  className="path-hex "
-                  d="M 12,25 L 19,5 L 26,25 L 12,25 z "
-                  id="path2894"
-                />
-                <path
-                  className="path-hex "
-                  d="M 19,37 L 12,17 L 26,17 L 19,37 z "
-                  id="path2896"
-                />
-                <path className="path-hex " d="M 5,13 L 33,29" id="line-6-3" />
-                <path className="path-hex " d="M 5,29 L 33,13" id="line-6-2" />
-                <path className="path-hex " d="M 19,5 L 19,37" id="line=-1-3" />
-                <path
-                  className="path-hex "
-                  d="M 5,29 L 19,13 L 26,25 L 5,29 z "
-                  id="path2904"
-                />
-                <path
-                  className="path-hex "
-                  d="M 33,29 L 19,13 L 12,25 L 33,29 z "
-                  id="path2906"
-                />
-                <path
-                  className="path-hex "
-                  d="M 33,13 L 12,17 L 19,29 L 33,13 z "
-                  id="path2908"
-                />
-                <path
-                  className="path-hex "
-                  d="M 5,13 L 19,29 L 26,17 L 5,13 z "
-                  id="path2910"
-                />
-              </g>
-            </svg>
+          <span>
+            <SpaceInfo>
+              {displayedJoinedSpaces ? (
+                <Fragment>
+                  You're in the{" "}
+                  <CurrentSpace>{displayedJoinedSpaces}</CurrentSpace>!
+                </Fragment>
+              ) : (
+                <Fragment>
+                  <div>Click on a portal</div>
+                </Fragment>
+              )}
+            </SpaceInfo>
+          </span>
+          <div>
+            <Circle>
+              <div className="m-grid-container">
+                <div
+                  id="c6"
+                  className="circle row-2 c-center click-zone"
+                  onClick={() => addFloatingSpace("discord chat")}
+                >
+                  <span className="roomName">Get in line</span>
+                </div>
 
-            <div
-              id="c6"
-              className="circle row-2 c-center click-zone"
-              onClick={() => addFloatingSpace("discord chat")}
-            >
-              <span className="roomName">Get in line</span>
-            </div>
+                <div id="c7" className="circle row-3 c-center-right"></div>
 
-            <div id="c7" className="circle row-3 c-center-right"></div>
+                <div id="c8" className="circle row-5 c-center-right"></div>
+                <div
+                  id="c9"
+                  className="circle row-6 c-center click-zone"
+                  onClick={() => addFloatingSpace("loft.radio")}
+                >
+                  <span className="roomName">Enter VR</span>
+                </div>
+                <div id="c10" className="circle row-5 c-center-left"></div>
+                <div id="c11" className="circle row-3 c-center-left"></div>
 
-            <div id="c8" className="circle row-5 c-center-right"></div>
-            <div
-              id="c9"
-              className="circle row-6 c-center click-zone"
-              onClick={() => addFloatingSpace("loft.radio")}
-            >
-              <span className="roomName">Enter VR</span>
-            </div>
-            <div id="c10" className="circle row-5 c-center-left"></div>
-            <div id="c11" className="circle row-3 c-center-left"></div>
-
-            <div
-              id="c12"
-              className="circle row-4 c-center click-zone"
-              onClick={() => addFloatingSpace("calendar")}
-            >
-              <span className="roomName">Event calendar</span>
-            </div>
+                <div
+                  id="c12"
+                  className="circle row-4 c-center click-zone"
+                  onClick={() => addFloatingSpace("calendar")}
+                >
+                  <span className="roomName">Event calendar</span>
+                </div>
+              </div>
+            </Circle>
           </div>
-          {/*
-        <span className="mapInstructions">
-          Click a location to join a conversation.
-        </span>
-        */}
-        </div>
       </BrowserView>
       <MobileView>
         <MobileContainer>
