@@ -1,18 +1,93 @@
-const domain = 'portal.interspace.chat';
+const domain = 'meet.jit.si';
+const holondomain = 'holons.hackalong.io'
 
-export const JitsiInstances = ['capsule1', 'capsule2'];
+export const JitsiInstances = ["ValuesAndWorldview","HealthAndWellbeing","FoodAndAgriculture","BusinessAndTrade","EnergyAndResources","ClimateChange","EcosystemsAndBiosphere","WaterAvailability","HabitatAndInfrastructure","EconomyAndWealth","GovernanceAndInstitutions","CommunityAndResilience","THEOS"];
 
 export const RoomURLs = {
-	capsule1: {
+	ValuesAndWorldview: {
 		jitsi: {
 			domain,
-			roomName: 'capsule1'
+			roomName: 'ValuesAndWorldview'
+		},
+		holons: {
+			domain,
+			roomName: ''
 		}
 	},
-	capsule2: {
+	HealthAndWellbeing: {
 		jitsi: {
 			domain,
-			roomName: 'capsule2'
+			roomName: 'HealthAndWellbeing'
+		},
+		holons: {
+			domain,
+			roomName: ''
+		}
+	},
+	FoodAndAgriculture: {
+		jitsi: {
+			domain,
+			roomName: 'FoodAndAgriculture'
+		}
+	},
+	BusinessAndTrade: {
+		jitsi: {
+			domain,
+			roomName: 'BusinessAndTrade'
+		}
+	},
+	EnergyAndResources: {
+		jitsi: {
+			domain,
+			roomName: 'EnergyAndResources'
+		}
+	},
+	ClimateChange: {
+		jitsi: {
+			domain,
+			roomName: 'ClimateChange'
+		}
+	},
+	EcosystemsAndBiosphere: {
+		jitsi: {
+			domain,
+			roomName: 'EcosystemsAndBiosphere'
+		}
+	},
+	WaterAvailability: {
+		jitsi: {
+			domain,
+			roomName: 'WaterAvailability'
+		}
+	},
+	HabitatAndInfrastructure: {
+		jitsi: {
+			domain,
+			roomName: 'HabitatAndInfrastructure'
+		}
+	},
+	EconomyAndWealth: {
+		jitsi: {
+			domain,
+			roomName: 'EconomyAndWealth'
+		}
+	},
+	GovernanceAndInstitutions: {
+		jitsi: {
+			domain,
+			roomName: 'GovernanceAndInstitutions'
+		}
+	},
+	CommunityAndResilience: {
+		jitsi: {
+			domain,
+			roomName: 'CommunityAndResilience'
+		}
+	},
+	THEOS: {
+		jitsi: {
+			domain,
+			roomName: 'THEOS'
 		}
 	}
 };

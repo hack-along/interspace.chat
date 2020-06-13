@@ -5,6 +5,7 @@ import { Rnd } from "react-rnd";
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
 import LoftRadioInstance from "./integrations/LoftRadioInstance";
 import ChatInstance from "./integrations/ChatInstance";
+import HolonsInstance from "./integrations/HolonsInstance";
 import CalendarInstance from "./integrations/CalendarInstance";
 import RoomInstance from "./RoomInstance";
 import { RoomNames } from "../utils/constants";
@@ -70,6 +71,8 @@ function getFloatingRoomWindow(windowKey) {
     return <RoomInstance space={windowKey} />;
   } else if (windowKey === "discord chat") {
     return <ChatInstance />;
+  } else if (windowKey === "Holons") {
+    return <HolonsInstance />;
   } else if (windowKey === "calendar") {
     return <CalendarInstance />;
   } else if (windowKey === null) {

@@ -28,7 +28,7 @@ const Logotext = styled.h2`
 
 const Logolink = styled.a`
   display: flex;
-  width: 100px;
+  width: 120px;
   text-decoration-line: none;
   padding-bottom: 2rem;
 `;
@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <Logolink href="/">
-        <Logotext>interspace.chat</Logotext>
+        <Logotext>Hack-Along</Logotext>
       </Logolink>
       <Help />
       <Support />

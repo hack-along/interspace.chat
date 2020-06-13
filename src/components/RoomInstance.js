@@ -6,6 +6,8 @@ import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
 import { RoomURLs } from "../utils/constants";
 import JitsiInstance from "./integrations/JitsiInstance";
 import ChatInstance from "./integrations/ChatInstance";
+import HolonsInstance from "./integrations/HolonsInstance";
+//import Holons from "Holons"
 // import YoutubeInstance from './integrations/YoutubeInstance';
 // import HubInstance from './integrations/HubInstance';
 
@@ -15,9 +17,14 @@ const SERVICES = {
     component: JitsiInstance
   },
   chat: {
-    title: "chat",
+    title: "Chat",
     component: ChatInstance
+  },
+  holons: {
+    title: "Holons",
+    component: HolonsInstance
   }
+
 };
 
 const Container = styled.div`
@@ -30,7 +37,7 @@ const Container = styled.div`
 
 const ChatButton = styled.button`
   min-height: 20px;
-  max-width: 100px;
+  max-width: 120px;
   color: black;
   align-self: flex-end;
   margin-top: 15px;
@@ -55,10 +62,16 @@ const RoomInstance = ({ space }) => {
 
   return (
     <Container>
+      
       <RoomServiceComponent roomData={roomData} />
       {currentFloatingSpaces.indexOf("discord chat") === -1 ? (
         <ChatButton onClick={() => addFloatingSpace("discord chat")}>
           Open Chat
+        </ChatButton>
+      ) : null}
+        {currentFloatingSpaces.indexOf("Holons") === -1 ? (
+        <ChatButton onClick={() => addFloatingSpace("Holons")}>
+          Open Holons
         </ChatButton>
       ) : null}
     </Container>

@@ -6,7 +6,11 @@ import { BrowserView, MobileView } from "react-device-detect";
 import { FloatingSpaceContext } from "../contexts/FloatingSpaceContext";
 
 import Room from "./Room";
+
 import JitsiInstanceMobile from "./integrations/JistiInstanceMobile";
+
+//import Profile from "./Profile"
+//import Web3 from "./Web3"
 
 const Headline = styled.h6`
   color: whitesmoke;
@@ -109,6 +113,7 @@ const Space = () => {
   };
 
   return (
+    
     <SpaceSelector>
       <BrowserView>
         <span>
@@ -122,9 +127,11 @@ const Space = () => {
               <Fragment>
                 <div>Click on a portal</div>
               </Fragment>
+              
             )}
           </SpaceInfo>
         </span>
+
         <div>
           <div className="m-grid-container">
             <svg
@@ -194,73 +201,101 @@ const Space = () => {
             <div
               id="c0"
               className="circle row-1 c-center c-1 click-zone"
-              onClick={() => openInNewTab("https://portal.interspace.chat")}
+              onClick={() => addFloatingSpace("ValuesAndWorldview")}
             >
-              <span className="roomName">Launch new capsule</span>
+              <span className="roomName">Values and Worldview</span>
             </div>
             <div
               id="c1"
               className="circle row-2 c-right click-zone"
-              onClick={() => addFloatingSpace("capsule2")}
+              onClick={() => addFloatingSpace("HealthAndWellbeing")}
             >
-              <span className="roomName">Capsule 2</span>
+              <span className="roomName">Health &amp; Wellbeing</span>
             </div>
+
             <div
               id="c2"
               className="circle row-6 c-right click-zone"
-              onClick={() => openInNewTab("https://ethturin.com/")}
+              onClick={() => addFloatingSpace("FoodAndAgriculture")}
             >
-              <span className="roomName">ETHTurin</span>
+              <span className="roomName">Food &amp; Agriculture</span>
             </div>
             <div
               id="c3"
               className="circle row-7 c-center click-zone"
-              onClick={() => openInNewTab("https://noncon.interspace.chat")}
+              onClick={() => addFloatingSpace("BusinessAndTrade")}
             >
-              <span className="roomName">NonCon</span>
+              <span className="roomName">Business &amp; Trade</span>
             </div>
             <div
               id="c4"
               className="circle row-6 c-left click-zone"
-              onClick={() => openInNewTab("https://interspace.metagame.wtf")}
+              onClick={() => addFloatingSpace("EnergyAndResources")}
             >
-              <span className="roomName">Metagame</span>
+              <span className="roomName">Energy &amp; Resources</span>
             </div>
             <div
               id="c5"
               className="circle row-2 c-left click-zone"
-              onClick={() => addFloatingSpace("capsule1")}
+              onClick={() => addFloatingSpace("ClimateChange")}
             >
-              <span className="roomName">Capsule 1</span>
+              <span className="roomName">Climate Change</span>
             </div>
 
             <div
               id="c6"
               className="circle row-2 c-center click-zone"
-              onClick={() => addFloatingSpace("discord chat")}
+              onClick={() => addFloatingSpace("EcosystemsAndBiosphere")}
             >
-              <span className="roomName">Discord chat</span>
+              <span className="roomName">Ecosystems &amp; Biosphere</span>
             </div>
 
-            <div id="c7" className="circle row-3 c-center-right"></div>
+            <div 
+              id="c7" 
+              className="circle row-3 c-center-right click-zone"
+              onClick={() => addFloatingSpace("WaterAvailability")}
+            >
+              <span className="roomName">Water Availability</span>
+            </div>
 
-            <div id="c8" className="circle row-5 c-center-right"></div>
+            <div 
+              id="c8" 
+              className="circle row-5 c-center-right click-zone"
+              onClick={() => addFloatingSpace("HabitatAndInfrastructure")}
+            >
+              <span className="roomName">Habitat &amp; Infrastructure</span>
+            </div>
+
             <div
               id="c9"
               className="circle row-6 c-center click-zone"
-              onClick={() => addFloatingSpace("loft.radio")}
+              onClick={() => addFloatingSpace("EconomyAndWealth")}
             >
-              <span className="roomName">loft.radio</span>
+              <span className="roomName">Economy &amp; Wealth</span>
             </div>
-            <div id="c10" className="circle row-5 c-center-left"></div>
-            <div id="c11" className="circle row-3 c-center-left"></div>
+            
+            <div 
+              id="c10" 
+              className="circle row-5 c-center-left click-zone"
+              onClick={() => addFloatingSpace("GovernanceAndInstitutions")}
+            >
+              <span className="roomName">Governance &amp; Institutions</span>
+            </div>
+            
+            <div 
+              id="c11" 
+              className="circle row-3 c-center-left click-zone"
+              onClick={() => addFloatingSpace("CommunityAndResilience")}
+            >
+            <span className="roomName">Community &amp; Resilience</span>
+            </div>
 
             <div
               id="c12"
               className="circle row-4 c-center click-zone"
-              onClick={() => addFloatingSpace("calendar")}
+              onClick={() => addFloatingSpace("THEOS")}
             >
-              <span className="roomName">Event calendar</span>
+              <span className="roomName"><b>THEOS</b></span>
             </div>
           </div>
           {/*
@@ -284,13 +319,23 @@ const Space = () => {
             </a>
           </Headline>
           <Descripton>
-            <p> Click below to enter the videochat</p>
-
-            <a href="https://portal.interspace.chat">or open a new room</a>
+            <p> Click below to enter the space</p>
           </Descripton>
           <MobileSelectorContainer>
-            <Room roomName="capsule1" />
-            <Room roomName="capsule2" />
+            <Room roomName="ValuesAndWorldview" />
+            <Room roomName="HealthAndWellbeing" />
+            <Room roomName="FoodAndAgriculture" />
+            <Room roomName="BusinessAndTrade" />
+            <Room roomName="EnergyAndResources" />
+            <Room roomName="ClimateChange" />
+            <Room roomName="EcosystemsAndBiosphere" />
+            <Room roomName="WaterAvailability" />
+            <Room roomName="HabitatAndInfrastructure" />
+            <Room roomName="EconomyAndWealth" />
+            <Room roomName="GovernanceAndInstitutions" />
+            <Room roomName="CommunityAndResilience" />
+            <Room roomName="THEOS" />
+            
           </MobileSelectorContainer>
           <JitsiInstanceMobile />
         </MobileContainer>

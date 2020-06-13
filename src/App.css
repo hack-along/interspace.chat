@@ -80,7 +80,7 @@ body {
   font-family: "Comfortaa","Roboto", "Courier New", Courier, monospace;
   font-size: 1rem;
   position: relative;
-  top: 67px;
+  top: 40px;
   justify-self: center;
   text-align: center;
   color: whitesmoke;
@@ -153,50 +153,50 @@ body {
 }
 
 #c0:hover {
-  background: url(./img/c12.png);
+  background: url(./img/c0.jpg);
   background-size: cover;
 }
 
 #c1:hover {  
-  background: url(./img/c10.jpg);
+  background: url(./img/c1.jpg);
   background-size: cover;
 }
 
 #c2:hover {
   filter: saturate(0);
-  background: url(./img/ethturin.png);
+  background: url(./img/c2.jpg);
   background-size: cover;
 }
 
 #c3:hover {
-  background: url(./img/noncon.png);
+  background: url(./img/c3.jpg);
   background-size: cover;
 }
 
 #c4:hover {
-  background: url(./img/metagame.png);
+  background: url(./img/c4.jpg);
   background-size: cover;
 }
 
 #c5:hover {
-  background: url(./img/c8.jpg);
-  
+  background: url(./img/c5.jpg);
   background-size: cover;
 }
 
 #c6:hover{
-  background: url(./img/c7.jpg);
+  background: url(./img/c6.jpg);
   background-size: cover;
 }
 
 
 #c7:hover{
+  background: url(./img/c7.jpg);
   background-size: cover;
 }
 
 
 #c8:hover{
-  
+  background: url(./img/c8.jpg);
   background-size: cover;
 }
 
@@ -207,18 +207,18 @@ body {
 }
 
 #c10:hover {
-  
+  background: url(./img/c10.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #c11:hover {
-  
+  background: url(./img/c11.jpg);
   background-size: cover;
 }
 
 #c12:hover {
-  background: url(./img/c6.jpg);
+  background: url(./img/c12.jpg);
   background-size: cover;
 }
 
