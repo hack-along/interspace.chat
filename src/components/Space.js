@@ -208,23 +208,23 @@ const Space = () => {
             <div
               id="c2"
               className="circle row-6 c-right click-zone"
-              onClick={() => openInNewTab("https://ethturin.com/")}
+              onClick={() => addFloatingSpace("breakout 1")}
             >
-              <span className="roomName">ETHTurin</span>
+              <span className="roomName">Breakout Room 1</span>
             </div>
             <div
               id="c3"
               className="circle row-7 c-center click-zone"
-              onClick={() => openInNewTab("https://noncon.interspace.chat")}
+              onClick={() => addFloatingSpace("breakout 2")}
             >
-              <span className="roomName">NonCon</span>
+              <span className="roomName">Breakout Room 2</span>
             </div>
             <div
               id="c4"
               className="circle row-6 c-left click-zone"
-              onClick={() => openInNewTab("https://interspace.metagame.wtf")}
+              onClick={() => addFloatingSpace("Identity")}
             >
-              <span className="roomName">Metagame</span>
+              <span className="roomName">Identity Space</span>
             </div>
             <div
               id="c5"
