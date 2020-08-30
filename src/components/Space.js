@@ -280,7 +280,7 @@ const Space = () => {
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
-              interspace.chat
+              Equinox Unconference
             </a>
           </Headline>
           <Descripton>
