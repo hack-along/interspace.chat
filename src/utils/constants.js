@@ -1,7 +1,7 @@
 const domain = 'meet.jit.si';
 const holondomain = 'holons.hackalong.io'
 
-export const JitsiInstances = ["ValuesAndWorldview","HealthAndWellbeing","FoodAndAgriculture","BusinessAndTrade","EnergyAndResources","ClimateChange","EcosystemsAndBiosphere","WaterAvailability","HabitatAndInfrastructure","EconomyAndWealth","GovernanceAndInstitutions","CommunityAndResilience","THEOS"];
+export const JitsiInstances = ["ValuesAndWorldview","HealthAndWellbeing","FoodAndAgriculture","BusinessAndTrade","EnergyAndResources","ClimateChange","EcosystemsAndBiosphere","WaterAvailability","HabitatAndInfrastructure","EconomyAndWealth","GovernanceAndInstitutions","CommunityAndResilience","THΞOS"];
 
 export const RoomURLs = {
 	ValuesAndWorldview: {
@@ -9,8 +9,8 @@ export const RoomURLs = {
 			domain,
 			roomName: 'ValuesAndWorldview'
 		},
-		holons: {
-			domain,
+		holon: {
+			holondomain,
 			roomName: ''
 		}
 	},
@@ -84,10 +84,10 @@ export const RoomURLs = {
 			roomName: 'CommunityAndResilience'
 		}
 	},
-	THEOS: {
+	THΞOS: {
 		jitsi: {
 			domain,
-			roomName: 'THEOS'
+			roomName: 'THΞOS'
 		}
 	}
 };

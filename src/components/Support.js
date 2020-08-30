@@ -74,6 +74,18 @@ const Support = () => {
                 alt="Supported by Parallele Polis Vienna"
               />
 
+              <StyledSupportertext>Interspace Chat</StyledSupportertext>
+            </StyledLink>
+            <StyledLink
+              href="https://interspace.chat"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={SupporterParallele}
+                alt="Supported by Parallele Polis Vienna"
+              />
+
               <StyledSupportertext>Parallele Polis</StyledSupportertext>
             </StyledLink>
           </StyledListItem>

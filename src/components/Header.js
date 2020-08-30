@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <Logolink href="/">
-        <Logotext>Hack-Along</Logotext>
+        <Logotext>THΞOS</Logotext>
       </Logolink>
       <Help />
       <Support />

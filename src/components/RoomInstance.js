@@ -7,11 +7,15 @@ import { RoomURLs } from "../utils/constants";
 import JitsiInstance from "./integrations/JitsiInstance";
 import ChatInstance from "./integrations/ChatInstance";
 import HolonsInstance from "./integrations/HolonsInstance";
-//import Holons from "Holons"
+import Holon from "./Holon"
 // import YoutubeInstance from './integrations/YoutubeInstance';
 // import HubInstance from './integrations/HubInstance';
 
 const SERVICES = {
+  holons: {
+    title: "Holons",
+    component: HolonsInstance
+  },
   jitsi: {
     title: "Videochat",
     component: JitsiInstance
@@ -20,9 +24,9 @@ const SERVICES = {
     title: "Chat",
     component: ChatInstance
   },
-  holons: {
-    title: "Holons",
-    component: HolonsInstance
+  holon: {
+    title: "Holon",
+    component: Holon
   }
 
 };
@@ -31,7 +35,7 @@ const Container = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: flex-start;
 `;
 
@@ -39,9 +43,11 @@ const ChatButton = styled.button`
   min-height: 20px;
   max-width: 120px;
   color: black;
-  align-self: flex-end;
+  align-self: flex-start;
   margin-top: 15px;
 `;
+
+
 
 const RoomInstance = ({ space }) => {
   const { currentFloatingSpaces, addFloatingSpace } = useContext(
@@ -61,20 +67,23 @@ const RoomInstance = ({ space }) => {
   const RoomServiceComponent = selectedService.component;
 
   return (
-    <Container>
-      
-      <RoomServiceComponent roomData={roomData} />
-      {currentFloatingSpaces.indexOf("discord chat") === -1 ? (
-        <ChatButton onClick={() => addFloatingSpace("discord chat")}>
-          Open Chat
-        </ChatButton>
-      ) : null}
+    <Container>       
+        <Holon/>
+        
+        {/*<RoomServiceComponent roomData={roomData} />
+         {currentFloatingSpaces.indexOf("discord chat") === -1 ? (
+          <ChatButton onClick={() => addFloatingSpace("discord chat")}>
+            Open Chat
+          </ChatButton>
+        ) : null}
+          
         {currentFloatingSpaces.indexOf("Holons") === -1 ? (
-        <ChatButton onClick={() => addFloatingSpace("Holons")}>
-          Open Holons
-        </ChatButton>
-      ) : null}
+          <ChatButton onClick={() => addFloatingSpace("Holons")}>
+            Open Holons
+          </ChatButton>
+        ) : null} */}
     </Container>
+   
   );
 };
 

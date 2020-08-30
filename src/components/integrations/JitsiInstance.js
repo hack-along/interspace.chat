@@ -13,34 +13,34 @@ const JitsiInstance = ({ width, height, roomData }) => {
       height: "100%",
       parentNode: root.current,
       interfaceConfigOverwrite: {
-        defaultLanguage: `de`,
-        TOOLBAR_ALWAYS_VISIBLE: "true",
-        INITIAL_TOOLBAR_TIMEOUT: 200000,
+        defaultLanguage: `en`,
+        TOOLBAR_ALWAYS_VISIBLE: "false",
+        //INITIAL_TOOLBAR_TIMEOUT: 200000,
         TOOLBAR_BUTTONS: [
           "microphone",
           "camera",
-          "closedcaptions",
+          //"closedcaptions",
           "desktop",
           "fullscreen",
           "fodeviceselection",
-          "hangup",
+          //"hangup",
           "profile",
-          "info",
-          "recording",
-          "livestreaming",
-          "etherpad",
-          "sharedvideo",
-          "settings",
+          //"info",
+          //"recording",
+          //"livestreaming",
+          //"etherpad",
+          //"sharedvideo",
+          //"settings",
           "raisehand",
-          "videoquality",
-          "filmstrip",
-          "invite",
-          "feedback",
-          "stats",
-          "shortcuts",
-          "tileview",
-          "download",
-          "help",
+          //"videoquality",
+          //"filmstrip",
+          //"invite",
+          //"feedback",
+          //"stats",
+          //"shortcuts",
+          //"tileview",
+          //"download",
+          //"help",
           "mute-everyone"
         ]
       }
@@ -54,7 +54,7 @@ const JitsiInstance = ({ width, height, roomData }) => {
     };
   }, [roomData, width, height]);
 
-  return <div ref={root} style={{ height: "100%" }}></div>;
+  return <div ref={root} style={{ height: "100%", width:"100%"}}></div>;
 };
 
 export default JitsiInstance;

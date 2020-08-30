@@ -10,7 +10,7 @@ import Room from "./Room";
 import JitsiInstanceMobile from "./integrations/JistiInstanceMobile";
 
 //import Profile from "./Profile"
-//import Web3 from "./Web3"
+import Web3 from "./Web3"
 
 const Headline = styled.h6`
   color: whitesmoke;
@@ -293,9 +293,8 @@ const Space = () => {
             <div
               id="c12"
               className="circle row-4 c-center click-zone"
-              onClick={() => addFloatingSpace("THEOS")}
             >
-              <span className="roomName"><b>THEOS</b></span>
+              <span className="roomName"><button>Send Funds</button></span>
             </div>
           </div>
           {/*
@@ -310,12 +309,12 @@ const Space = () => {
           <Headline>
             Welcome to{" "}
             <a
-              href="https://interspace.chat"
+              href="https://hackalong.io"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
-              interspace.chat
+              Hack-Along
             </a>
           </Headline>
           <Descripton>
@@ -334,8 +333,6 @@ const Space = () => {
             <Room roomName="EconomyAndWealth" />
             <Room roomName="GovernanceAndInstitutions" />
             <Room roomName="CommunityAndResilience" />
-            <Room roomName="THEOS" />
-            
           </MobileSelectorContainer>
           <JitsiInstanceMobile />
         </MobileContainer>
